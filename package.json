@@ -1,7 +1,7 @@
 {
   "name": "executable-truth-table",
-  "version": "0.0.2",
-  "description": "The Executable Truth Table for Node.js",
+  "version": "0.0.3",
+  "description": "Node.js Truth Table implementation",
   "main": "ttable.js",
   "scripts": {
     "test": "mocha tests/**/**.spec.js",

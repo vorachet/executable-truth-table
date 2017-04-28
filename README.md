@@ -1,4 +1,4 @@
-# Executable Truth Table for Node.js (TTABLE)
+# Node.js Truth Table implementation (TTABLE)
 
 TTABLE is Node.js Truth Table implementation. You can use Truth Table technique to model I/O behaviors and functions of your Node.js program. TTABLE provides methods to define conditions, states, and decisions, which is readiness. TTABLE is executable and each decision definition can call multiple javascript functions, so you can choose to use TTABLE as your decision logic. TTABLE provides built-in Truth Table specification and runtime statistic document generator. You can check that everything in your decision logic design is covered. Webapp integration examples is available at [Executable Truth Table Webapp Examples](https://github.com/vorachet/executable-truth-table-webapp-examples)
 
@@ -6,13 +6,12 @@ TTABLE is Node.js Truth Table implementation. You can use Truth Table technique 
 
 
 ```bash
-$ npm install executable-truth-table --save
+$ npm install executable-truth-table@latest --save
 
 ```
 
 # Climate Controller Truth Table Example
 
-[Code example](https://github.com/vorachet/executable-truth-table/blob/master/examples/climate-controller.js)
 
 ```javascript
 "use strict";
@@ -308,8 +307,6 @@ Output
 
 ## Colors Truth Table Example
 
-[Code example](https://github.com/vorachet/executable-truth-table/blob/master/examples/colors.js)
-
 
 ```javascript
 "use strict"
@@ -362,7 +359,6 @@ fs.writeFileSync(__dirname + '/colors_statistics.json', JSON.stringify(ttable.st
 
 ## Wired Truth Table Example
 
-[Code example](https://github.com/vorachet/executable-truth-table/blob/master/examples/wired.js)
 
 ```javascript
 "use strict";
