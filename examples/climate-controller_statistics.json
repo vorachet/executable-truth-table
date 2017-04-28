@@ -81,7 +81,7 @@
         "tempSensor": 40,
         "humiditySensor": 80
       },
-      "performedOn": "2017-04-28T13:21:04.536Z",
+      "performedOn": "2017-04-28T15:16:02.969Z",
       "performedDecisions": [
         "HeatOn()",
         "HumidOn()"
@@ -99,7 +99,7 @@
         "tempSensor": 80,
         "humiditySensor": 20
       },
-      "performedOn": "2017-04-28T13:21:04.681Z",
+      "performedOn": "2017-04-28T15:16:03.105Z",
       "performedDecisions": [
         "HumidOn()",
         "CoolOn()"
@@ -117,7 +117,7 @@
         "tempSensor": 100,
         "humiditySensor": 50
       },
-      "performedOn": "2017-04-28T13:21:04.682Z",
+      "performedOn": "2017-04-28T15:16:03.114Z",
       "performedDecisions": [
         "CoolOn()"
       ],
@@ -134,7 +134,7 @@
         "tempSensor": 10,
         "humiditySensor": 10
       },
-      "performedOn": "2017-04-28T13:21:04.684Z",
+      "performedOn": "2017-04-28T15:16:03.116Z",
       "performedDecisions": [
         "HeatOn()"
       ],
