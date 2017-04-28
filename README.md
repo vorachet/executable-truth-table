@@ -5,54 +5,10 @@ You can use TTABLE to model I/O behavior and function of a Node.js software usin
 TTABLE makes the defition of conditions, states, and decisions more easily by providing felxible methods to define states and callback functions for decision.
 
 
-# Creating TTABLE object
-
-```
-const TTABLE = require('executable-truth-table')
-const ttable = new TTABLE()
-
-```
-
-# Defining conditions
-
-A condition consits of state and equation. The state is a unique string used to define the name of the . The equation is a math expression
-
-```
-ttable
-  .setCondition({state: "Hot", equation: "tempSensor > DESIRED_TEMP"})
-  .setCondition({state: "Dry", equation: "humiditySensor < DESIRED_HUMIDITY"})
-```
-
-# Defining decisions
-
-```
-ttable.setDecision({run: [Array Of Functions], if: [{state: "Dry", is: true},  {state: "Hot", is: false}]})
-```
-
-Example
-```
-ttable
-  .setDecision({run: [HeatOn],          if: [{state: "Dry", is: true},  {state: "Hot", is: false}]})
-  .setDecision({run: [HumidOn, CoolOn], if: [{state: "Dry", is: true},  {state: "Hot", is: true}]})
-  .setDecision({run: [CoolOn],          if: [{state: "Hot", is: true},  {state: "Dry", is: false}]})
-  .setDecision({run: [HeatOn, HumidOn], if: [{state: "Hot", is: false}, {state: "Dry", is: false}]})
-```
-
-# Evaluating resutl and calling functions
+# Climate Controoler Truth Table Example
 
 
-```
-ttable.read({DESIRED_TEMP: 70, DESIRED_HUMIDITY: 40, tempSensor: 40, humiditySensor: 80 })
-ttable.read({DESIRED_TEMP: 70, DESIRED_HUMIDITY: 40, tempSensor: 80, humiditySensor: 20})
-ttable.read({DESIRED_TEMP: 70, DESIRED_HUMIDITY: 40, tempSensor: 100, humiditySensor: 50})
-ttable.read({DESIRED_TEMP: 70, DESIRED_HUMIDITY: 40, tempSensor: 10, humiditySensor: 10})
-```
-
-
-# Examples
-
-
-```
+```javascript
 "use strict";
 
 const TTABLE = require('executable-truth-table')
@@ -111,21 +67,21 @@ ttable.read({DESIRED_TEMP: 70, DESIRED_HUMIDITY: 40, tempSensor: 10, humiditySen
 ## Generating TruthTable specification
 
 
-```
+```javascript
 ttable.exportSpecAsHTML()
 ```
 
-![generated_spec](https://github.com/vorachet/executable-truth-table-webapp-examples/blob/master/images/generated_spec.png)
+![generated_spec](https://github.com/vorachet/executable-truth-table/blob/master/images/generated_spec.png)
 
 [View example specification table](https://htmlpreview.github.io/?https://github.com/vorachet/executable-truth-table/blob/master/examples/climate-controller_spec.html)
 
 
 ## Generating TruthTable statistic
 
-```
+```javascript
 ttable.exportStatAsHTML()
 ```
 
-![generated_statistic](https://github.com/vorachet/executable-truth-table-webapp-examples/blob/master/images/generated_statistic.png)
+![generated_statistic](https://github.com/vorachet/executable-truth-table/blob/master/images/generated_statistic.png)
 
 [View example statistic table](https://htmlpreview.github.io/?https://github.com/vorachet/executable-truth-table/blob/master/examples/climate-controller_statistics.html)
