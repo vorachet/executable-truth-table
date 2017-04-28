@@ -1,12 +1,10 @@
 # Executable Truth Table for Node.js (TTABLE)
 
-You can use TTABLE to model I/O behavior and function of a Node.js software using Truth Table technique. TTABLE provides built-in Truth Table specification and runtime statistic data generator. You can generate the documents anytime from the TTABLE objects that used to develop your software  check that everything in your definition of program conditions, states and decision are covered and
-
-TTABLE makes the defition of conditions, states, and decisions more easily by providing felxible methods to define states and callback functions for decision.
-
+TTABLE is Node.js Truth Table implementation. You can use Truth Table technique to model I/O behaviors and functions of your Node.js program. TTABLE provides methods to define conditions, states, and decisions, which is readiness. TTABLE is executable and each decision definition can call multiple javascript functions, so you can choose to use TTABLE as your decision logic. TTABLE provides built-in Truth Table specification and runtime statistic document generator. You can check that everything in your decision logic design is covered. Webapp integration examples is available at https://github.com/vorachet/executable-truth-table-webapp-examples
 
 # Climate Controller Truth Table Example
 
+[Code example](https://github.com/vorachet/executable-truth-table/blob/master/examples/climate-controller.js)
 
 ```javascript
 "use strict";
@@ -63,6 +61,58 @@ fs.writeFileSync(__dirname + '/climate-controller_statistics.html', ttable.expor
 fs.writeFileSync(__dirname + '/climate-controller_statistics.json', JSON.stringify(ttable.statistics, null, 2), 'utf-8')
 
 
+```
+
+Output
+
+```bash
+  $ node climate-controller
+  ttable setCondition: { state: 'Hot', equation: 'tempSensor > DESIRED_TEMP' } +0ms
+  ttable setCondition: { state: 'Dry', equation: 'humiditySensor < DESIRED_HUMIDITY' } +5ms
+  ttable setDecision: FT run [ [Function: HeatOn] ] if [ { state: 'Dry', is: true }, { state: 'Hot', is: false } ] +3ms
+  ttable setDecision: TT run [ [Function: HumidOn], [Function: CoolOn] ] if [ { state: 'Dry', is: true }, { state: 'Hot', is: true } ] +1ms
+  ttable setDecision: TF run [ [Function: CoolOn] ] if [ { state: 'Hot', is: true }, { state: 'Dry', is: false } ] +0ms
+  ttable setDecision: FF run [ [Function: HeatOn], [Function: HumidOn] ] if [ { state: 'Hot', is: false }, { state: 'Dry', is: false } ] +1ms
+  ttable eval() inputs {"DESIRED_TEMP":70,"DESIRED_HUMIDITY":40,"tempSensor":40,"humiditySensor":80} +3ms
+  ttable  state[Hot(F)], eq[tempSensor > DESIRED_TEMP], parameterized[40 > 70] +116ms
+  ttable  state[Dry(F)], eq[humiditySensor < DESIRED_HUMIDITY], parameterized[80 < 40] +5ms
+  ttable  matchedDecisionState = FF +0ms
+  ttable  matchedDecisions =  [ 'HeatOn()', 'HumidOn()' ] +0ms
+  ClimateController HeatOn() +1ms
+  ClimateController    startHeater() +0ms
+  ClimateController    stopCooler() +0ms
+  ClimateController    stopHumidifier() +0ms
+  ClimateController HumidOn() +0ms
+  ClimateController    startHumidifier() +0ms
+  ttable eval() inputs {"DESIRED_TEMP":70,"DESIRED_HUMIDITY":40,"tempSensor":80,"humiditySensor":20} +0ms
+  ttable  state[Hot(T)], eq[tempSensor > DESIRED_TEMP], parameterized[80 > 70] +1ms
+  ttable  state[Dry(T)], eq[humiditySensor < DESIRED_HUMIDITY], parameterized[20 < 40] +0ms
+  ttable  matchedDecisionState = TT +0ms
+  ttable  matchedDecisions =  [ 'HumidOn()', 'CoolOn()' ] +0ms
+  ClimateController HumidOn() +0ms
+  ClimateController    startHumidifier() +0ms
+  ClimateController CoolOn() +0ms
+  ClimateController    startCooler() +0ms
+  ClimateController    stopHeater() +0ms
+  ClimateController    stopHumidifier() +0ms
+  ttable eval() inputs {"DESIRED_TEMP":70,"DESIRED_HUMIDITY":40,"tempSensor":100,"humiditySensor":50} +0ms
+  ttable  state[Hot(T)], eq[tempSensor > DESIRED_TEMP], parameterized[100 > 70] +1ms
+  ttable  state[Dry(F)], eq[humiditySensor < DESIRED_HUMIDITY], parameterized[50 < 40] +0ms
+  ttable  matchedDecisionState = TF +0ms
+  ttable  matchedDecisions =  [ 'CoolOn()' ] +0ms
+  ClimateController CoolOn() +0ms
+  ClimateController    startCooler() +0ms
+  ClimateController    stopHeater() +0ms
+  ClimateController    stopHumidifier() +1ms
+  ttable eval() inputs {"DESIRED_TEMP":70,"DESIRED_HUMIDITY":40,"tempSensor":10,"humiditySensor":10} +0ms
+  ttable  state[Hot(F)], eq[tempSensor > DESIRED_TEMP], parameterized[10 > 70] +0ms
+  ttable  state[Dry(T)], eq[humiditySensor < DESIRED_HUMIDITY], parameterized[10 < 40] +0ms
+  ttable  matchedDecisionState = FT +0ms
+  ttable  matchedDecisions =  [ 'HeatOn()' ] +1ms
+  ClimateController HeatOn() +0ms
+  ClimateController    startHeater() +0ms
+  ClimateController    stopCooler() +0ms
+  ClimateController    stopHumidifier() +0ms
 ```
 
 ## Generating TruthTable specification
