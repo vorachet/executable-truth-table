@@ -1,0 +1,148 @@
+{
+  "decisions": [
+    {
+      "decisions": [
+        "HeatOn()"
+      ],
+      "if": [
+        {
+          "state": "Dry",
+          "is": true
+        },
+        {
+          "state": "Hot",
+          "is": false
+        }
+      ]
+    },
+    {
+      "decisions": [
+        "HumidOn()",
+        "CoolOn()"
+      ],
+      "if": [
+        {
+          "state": "Dry",
+          "is": true
+        },
+        {
+          "state": "Hot",
+          "is": true
+        }
+      ]
+    },
+    {
+      "decisions": [
+        "CoolOn()"
+      ],
+      "if": [
+        {
+          "state": "Hot",
+          "is": true
+        },
+        {
+          "state": "Dry",
+          "is": false
+        }
+      ]
+    },
+    {
+      "decisions": [
+        "HeatOn()",
+        "HumidOn()"
+      ],
+      "if": [
+        {
+          "state": "Hot",
+          "is": false
+        },
+        {
+          "state": "Dry",
+          "is": false
+        }
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "state": "Hot",
+      "equation": "tempSensor > DESIRED_TEMP"
+    },
+    {
+      "state": "Dry",
+      "equation": "humiditySensor < DESIRED_HUMIDITY"
+    }
+  ],
+  "performed": [
+    {
+      "inputs": {
+        "DESIRED_TEMP": 70,
+        "DESIRED_HUMIDITY": 40,
+        "tempSensor": 40,
+        "humiditySensor": 80
+      },
+      "performedOn": "2017-04-28T13:21:04.536Z",
+      "performedDecisions": [
+        "HeatOn()",
+        "HumidOn()"
+      ],
+      "eval": "FF",
+      "states": [
+        "Hot (F)",
+        "Dry (F)"
+      ]
+    },
+    {
+      "inputs": {
+        "DESIRED_TEMP": 70,
+        "DESIRED_HUMIDITY": 40,
+        "tempSensor": 80,
+        "humiditySensor": 20
+      },
+      "performedOn": "2017-04-28T13:21:04.681Z",
+      "performedDecisions": [
+        "HumidOn()",
+        "CoolOn()"
+      ],
+      "eval": "TT",
+      "states": [
+        "Hot (T)",
+        "Dry (T)"
+      ]
+    },
+    {
+      "inputs": {
+        "DESIRED_TEMP": 70,
+        "DESIRED_HUMIDITY": 40,
+        "tempSensor": 100,
+        "humiditySensor": 50
+      },
+      "performedOn": "2017-04-28T13:21:04.682Z",
+      "performedDecisions": [
+        "CoolOn()"
+      ],
+      "eval": "FT",
+      "states": [
+        "Hot (T)",
+        "Dry (F)"
+      ]
+    },
+    {
+      "inputs": {
+        "DESIRED_TEMP": 70,
+        "DESIRED_HUMIDITY": 40,
+        "tempSensor": 10,
+        "humiditySensor": 10
+      },
+      "performedOn": "2017-04-28T13:21:04.684Z",
+      "performedDecisions": [
+        "HeatOn()"
+      ],
+      "eval": "TF",
+      "states": [
+        "Hot (F)",
+        "Dry (T)"
+      ]
+    }
+  ]
+}

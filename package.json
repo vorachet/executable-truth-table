@@ -1,0 +1,32 @@
+{
+  "name": "executable-truth-table",
+  "version": "0.0.2",
+  "description": "The Executable Truth Table for Node.js",
+  "main": "ttable.js",
+  "scripts": {
+    "test": "mocha tests/**/**.spec.js",
+    "lint": "eslint *.js -f table || true",
+    "lint:fix": "eslint ./ttable.js -f table --fix"
+  },
+   "repository": {
+    "type": "git",
+    "url": "https://github.com/vorachet/executable-truth-table"
+  },
+  "author": "Vorachet Jaroensawas",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.19.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-node": "^4.2.2",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "mocha": "^3.3.0"
+  },
+  "dependencies": {
+    "debug": "^2.6.4",
+    "lodash": "^4.17.4",
+    "mathjs": "^3.12.1"
+  }
+}

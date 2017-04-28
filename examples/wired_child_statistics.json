@@ -1,0 +1,98 @@
+{
+  "decisions": [
+    {
+      "decisions": [
+        "ChildDecision1()"
+      ],
+      "if": [
+        {
+          "state": "ChildS1",
+          "is": true
+        }
+      ]
+    },
+    {
+      "decisions": [
+        "ChildDecision2()"
+      ],
+      "if": [
+        {
+          "state": "ChildS2",
+          "is": true
+        }
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "state": "ChildS1",
+      "equation": "a * c < 100"
+    },
+    {
+      "state": "ChildS2",
+      "equation": "a * c > 100"
+    }
+  ],
+  "performed": [
+    {
+      "inputs": {
+        "a": 5,
+        "c": 1
+      },
+      "performedOn": "2017-04-28T13:21:08.029Z",
+      "performedDecisions": [
+        "ChildDecision1()"
+      ],
+      "eval": "FT",
+      "states": [
+        "ChildS1 (T)",
+        "ChildS2 (F)"
+      ]
+    },
+    {
+      "inputs": {
+        "a": 20,
+        "c": 1
+      },
+      "performedOn": "2017-04-28T13:21:08.032Z",
+      "performedDecisions": [
+        "ChildDecision1()"
+      ],
+      "eval": "FT",
+      "states": [
+        "ChildS1 (T)",
+        "ChildS2 (F)"
+      ]
+    },
+    {
+      "inputs": {
+        "a": 5,
+        "c": 100
+      },
+      "performedOn": "2017-04-28T13:21:08.034Z",
+      "performedDecisions": [
+        "ChildDecision2()"
+      ],
+      "eval": "TF",
+      "states": [
+        "ChildS1 (F)",
+        "ChildS2 (T)"
+      ]
+    },
+    {
+      "inputs": {
+        "a": 20,
+        "c": 100
+      },
+      "performedOn": "2017-04-28T13:21:08.036Z",
+      "performedDecisions": [
+        "ChildDecision2()"
+      ],
+      "eval": "TF",
+      "states": [
+        "ChildS1 (F)",
+        "ChildS2 (T)"
+      ]
+    }
+  ]
+}

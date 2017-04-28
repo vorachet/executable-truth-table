@@ -1,0 +1,98 @@
+{
+  "decisions": [
+    {
+      "decisions": [
+        "ParentDecision1()"
+      ],
+      "if": [
+        {
+          "state": "ParentS1",
+          "is": true
+        }
+      ]
+    },
+    {
+      "decisions": [
+        "StarterDecision2()"
+      ],
+      "if": [
+        {
+          "state": "ParentS2",
+          "is": true
+        }
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "state": "ParentS1",
+      "equation": "a < 10"
+    },
+    {
+      "state": "ParentS2",
+      "equation": "a > 10"
+    }
+  ],
+  "performed": [
+    {
+      "inputs": {
+        "a": 5,
+        "c": 1
+      },
+      "performedOn": "2017-04-28T13:21:07.906Z",
+      "performedDecisions": [
+        "ParentDecision1()"
+      ],
+      "eval": "FT",
+      "states": [
+        "ParentS1 (T)",
+        "ParentS2 (F)"
+      ]
+    },
+    {
+      "inputs": {
+        "a": 20,
+        "c": 1
+      },
+      "performedOn": "2017-04-28T13:21:08.031Z",
+      "performedDecisions": [
+        "StarterDecision2()"
+      ],
+      "eval": "TF",
+      "states": [
+        "ParentS1 (F)",
+        "ParentS2 (T)"
+      ]
+    },
+    {
+      "inputs": {
+        "a": 5,
+        "c": 100
+      },
+      "performedOn": "2017-04-28T13:21:08.033Z",
+      "performedDecisions": [
+        "ParentDecision1()"
+      ],
+      "eval": "FT",
+      "states": [
+        "ParentS1 (T)",
+        "ParentS2 (F)"
+      ]
+    },
+    {
+      "inputs": {
+        "a": 20,
+        "c": 100
+      },
+      "performedOn": "2017-04-28T13:21:08.036Z",
+      "performedDecisions": [
+        "StarterDecision2()"
+      ],
+      "eval": "TF",
+      "states": [
+        "ParentS1 (F)",
+        "ParentS2 (T)"
+      ]
+    }
+  ]
+}
