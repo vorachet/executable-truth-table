@@ -17,6 +17,9 @@ $ npm install executable-truth-table@latest --save
 # Climate Controller Truth Table Example
 
 
+![generated_spec](https://github.com/vorachet/executable-truth-table/blob/master/images/concept.png)
+
+
 ```javascript
 "use strict";
 
