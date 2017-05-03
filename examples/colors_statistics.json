@@ -1,94 +1,5 @@
 {
-  "decisions": [
-    {
-      "decisions": [
-        "YELLOW()"
-      ],
-      "if": [
-        {
-          "state": "YELLOW",
-          "is": true
-        }
-      ]
-    },
-    {
-      "decisions": [
-        "CYAN()"
-      ],
-      "if": [
-        {
-          "state": "CYAN",
-          "is": true
-        }
-      ]
-    },
-    {
-      "decisions": [
-        "MAGENTA()"
-      ],
-      "if": [
-        {
-          "state": "MAGENTA",
-          "is": true
-        }
-      ]
-    },
-    {
-      "decisions": [
-        "RED()"
-      ],
-      "if": [
-        {
-          "state": "RED",
-          "is": true
-        }
-      ]
-    },
-    {
-      "decisions": [
-        "GREEN()"
-      ],
-      "if": [
-        {
-          "state": "GREEN",
-          "is": true
-        }
-      ]
-    },
-    {
-      "decisions": [
-        "BLUE()"
-      ],
-      "if": [
-        {
-          "state": "BLUE",
-          "is": true
-        }
-      ]
-    },
-    {
-      "decisions": [
-        "BLACK()"
-      ],
-      "if": [
-        {
-          "state": "BLACK",
-          "is": true
-        }
-      ]
-    },
-    {
-      "decisions": [
-        "WHITE()"
-      ],
-      "if": [
-        {
-          "state": "WHITE",
-          "is": true
-        }
-      ]
-    }
-  ],
+  "decisions": [],
   "conditions": [
     {
       "state": "YELLOW",
@@ -126,156 +37,30 @@
   "performed": [
     {
       "inputs": {
+        "r": 0,
+        "g": 0,
+        "b": 0
+      },
+      "performedOn": "2017-05-03T13:37:37.344Z",
+      "performedDecisions": [
+        "BLACK"
+      ],
+      "matchedStates": [
+        "BLACK"
+      ]
+    },
+    {
+      "inputs": {
         "r": 1,
         "g": 0,
         "b": 1
       },
-      "performedOn": "2017-04-28T15:15:56.315Z",
+      "performedOn": "2017-05-03T13:37:37.478Z",
       "performedDecisions": [
-        "MAGENTA()"
+        "MAGENTA"
       ],
-      "eval": "FFFFFTFF",
-      "states": [
-        "YELLOW (F)",
-        "CYAN (F)",
-        "MAGENTA (T)",
-        "WHITE (F)",
-        "RED (F)",
-        "GREEN (F)",
-        "BLUE (F)",
-        "BLACK (F)"
-      ]
-    },
-    {
-      "inputs": {
-        "r": 0,
-        "g": 1,
-        "b": 1
-      },
-      "performedOn": "2017-04-28T15:15:56.439Z",
-      "performedDecisions": [
-        "CYAN()"
-      ],
-      "eval": "FFFFFFTF",
-      "states": [
-        "YELLOW (F)",
-        "CYAN (T)",
-        "MAGENTA (F)",
-        "WHITE (F)",
-        "RED (F)",
-        "GREEN (F)",
-        "BLUE (F)",
-        "BLACK (F)"
-      ]
-    },
-    {
-      "inputs": {
-        "r": 0,
-        "g": 1,
-        "b": 1
-      },
-      "performedOn": "2017-04-28T15:15:56.443Z",
-      "performedDecisions": [
-        "CYAN()"
-      ],
-      "eval": "FFFFFFTF",
-      "states": [
-        "YELLOW (F)",
-        "CYAN (T)",
-        "MAGENTA (F)",
-        "WHITE (F)",
-        "RED (F)",
-        "GREEN (F)",
-        "BLUE (F)",
-        "BLACK (F)"
-      ]
-    },
-    {
-      "inputs": {
-        "r": 0,
-        "g": 1,
-        "b": 0
-      },
-      "performedOn": "2017-04-28T15:15:56.448Z",
-      "performedDecisions": [
-        "GREEN()"
-      ],
-      "eval": "FFTFFFFF",
-      "states": [
-        "YELLOW (F)",
-        "CYAN (F)",
-        "MAGENTA (F)",
-        "WHITE (F)",
-        "RED (F)",
-        "GREEN (T)",
-        "BLUE (F)",
-        "BLACK (F)"
-      ]
-    },
-    {
-      "inputs": {
-        "r": 0,
-        "g": 0,
-        "b": 0
-      },
-      "performedOn": "2017-04-28T15:15:56.453Z",
-      "performedDecisions": [
-        "BLACK()"
-      ],
-      "eval": "TFFFFFFF",
-      "states": [
-        "YELLOW (F)",
-        "CYAN (F)",
-        "MAGENTA (F)",
-        "WHITE (F)",
-        "RED (F)",
-        "GREEN (F)",
-        "BLUE (F)",
-        "BLACK (T)"
-      ]
-    },
-    {
-      "inputs": {
-        "r": 0,
-        "g": 1,
-        "b": 0
-      },
-      "performedOn": "2017-04-28T15:15:56.457Z",
-      "performedDecisions": [
-        "GREEN()"
-      ],
-      "eval": "FFTFFFFF",
-      "states": [
-        "YELLOW (F)",
-        "CYAN (F)",
-        "MAGENTA (F)",
-        "WHITE (F)",
-        "RED (F)",
-        "GREEN (T)",
-        "BLUE (F)",
-        "BLACK (F)"
-      ]
-    },
-    {
-      "inputs": {
-        "r": 0,
-        "g": 1,
-        "b": 0
-      },
-      "performedOn": "2017-04-28T15:15:56.468Z",
-      "performedDecisions": [
-        "GREEN()"
-      ],
-      "eval": "FFTFFFFF",
-      "states": [
-        "YELLOW (F)",
-        "CYAN (F)",
-        "MAGENTA (F)",
-        "WHITE (F)",
-        "RED (F)",
-        "GREEN (T)",
-        "BLUE (F)",
-        "BLACK (F)"
+      "matchedStates": [
+        "MAGENTA"
       ]
     },
     {
@@ -284,86 +69,40 @@
         "g": 0,
         "b": 1
       },
-      "performedOn": "2017-04-28T15:15:56.470Z",
+      "performedOn": "2017-05-03T13:37:37.483Z",
       "performedDecisions": [
-        "BLUE()"
+        "BLUE"
       ],
-      "eval": "FTFFFFFF",
-      "states": [
-        "YELLOW (F)",
-        "CYAN (F)",
-        "MAGENTA (F)",
-        "WHITE (F)",
-        "RED (F)",
-        "GREEN (F)",
-        "BLUE (T)",
-        "BLACK (F)"
-      ]
-    },
-    {
-      "inputs": {
-        "r": 0,
-        "g": 0,
-        "b": 1
-      },
-      "performedOn": "2017-04-28T15:15:56.475Z",
-      "performedDecisions": [
-        "BLUE()"
-      ],
-      "eval": "FTFFFFFF",
-      "states": [
-        "YELLOW (F)",
-        "CYAN (F)",
-        "MAGENTA (F)",
-        "WHITE (F)",
-        "RED (F)",
-        "GREEN (F)",
-        "BLUE (T)",
-        "BLACK (F)"
-      ]
-    },
-    {
-      "inputs": {
-        "r": 0,
-        "g": 0,
-        "b": 1
-      },
-      "performedOn": "2017-04-28T15:15:56.480Z",
-      "performedDecisions": [
-        "BLUE()"
-      ],
-      "eval": "FTFFFFFF",
-      "states": [
-        "YELLOW (F)",
-        "CYAN (F)",
-        "MAGENTA (F)",
-        "WHITE (F)",
-        "RED (F)",
-        "GREEN (F)",
-        "BLUE (T)",
-        "BLACK (F)"
+      "matchedStates": [
+        "BLUE"
       ]
     },
     {
       "inputs": {
         "r": 0,
         "g": 1,
+        "b": 0
+      },
+      "performedOn": "2017-05-03T13:37:37.488Z",
+      "performedDecisions": [
+        "GREEN"
+      ],
+      "matchedStates": [
+        "GREEN"
+      ]
+    },
+    {
+      "inputs": {
+        "r": 1,
+        "g": 0,
         "b": 1
       },
-      "performedOn": "2017-04-28T15:15:56.486Z",
+      "performedOn": "2017-05-03T13:37:37.492Z",
       "performedDecisions": [
-        "CYAN()"
+        "MAGENTA"
       ],
-      "eval": "FFFFFFTF",
-      "states": [
-        "YELLOW (F)",
-        "CYAN (T)",
-        "MAGENTA (F)",
-        "WHITE (F)",
-        "RED (F)",
-        "GREEN (F)",
-        "BLUE (F)",
-        "BLACK (F)"
+      "matchedStates": [
+        "MAGENTA"
       ]
     },
     {
@@ -372,174 +111,26 @@
         "g": 0,
         "b": 0
       },
-      "performedOn": "2017-04-28T15:15:56.488Z",
+      "performedOn": "2017-05-03T13:37:37.495Z",
       "performedDecisions": [
-        "RED()"
+        "RED"
       ],
-      "eval": "FFFTFFFF",
-      "states": [
-        "YELLOW (F)",
-        "CYAN (F)",
-        "MAGENTA (F)",
-        "WHITE (F)",
-        "RED (T)",
-        "GREEN (F)",
-        "BLUE (F)",
-        "BLACK (F)"
-      ]
-    },
-    {
-      "inputs": {
-        "r": 0,
-        "g": 1,
-        "b": 1
-      },
-      "performedOn": "2017-04-28T15:15:56.491Z",
-      "performedDecisions": [
-        "CYAN()"
-      ],
-      "eval": "FFFFFFTF",
-      "states": [
-        "YELLOW (F)",
-        "CYAN (T)",
-        "MAGENTA (F)",
-        "WHITE (F)",
-        "RED (F)",
-        "GREEN (F)",
-        "BLUE (F)",
-        "BLACK (F)"
-      ]
-    },
-    {
-      "inputs": {
-        "r": 1,
-        "g": 1,
-        "b": 0
-      },
-      "performedOn": "2017-04-28T15:15:56.493Z",
-      "performedDecisions": [
-        "YELLOW()"
-      ],
-      "eval": "FFFFFFFT",
-      "states": [
-        "YELLOW (T)",
-        "CYAN (F)",
-        "MAGENTA (F)",
-        "WHITE (F)",
-        "RED (F)",
-        "GREEN (F)",
-        "BLUE (F)",
-        "BLACK (F)"
-      ]
-    },
-    {
-      "inputs": {
-        "r": 0,
-        "g": 1,
-        "b": 1
-      },
-      "performedOn": "2017-04-28T15:15:56.497Z",
-      "performedDecisions": [
-        "CYAN()"
-      ],
-      "eval": "FFFFFFTF",
-      "states": [
-        "YELLOW (F)",
-        "CYAN (T)",
-        "MAGENTA (F)",
-        "WHITE (F)",
-        "RED (F)",
-        "GREEN (F)",
-        "BLUE (F)",
-        "BLACK (F)"
-      ]
-    },
-    {
-      "inputs": {
-        "r": 1,
-        "g": 1,
-        "b": 1
-      },
-      "performedOn": "2017-04-28T15:15:56.499Z",
-      "performedDecisions": [
-        "WHITE()"
-      ],
-      "eval": "FFFFTFFF",
-      "states": [
-        "YELLOW (F)",
-        "CYAN (F)",
-        "MAGENTA (F)",
-        "WHITE (T)",
-        "RED (F)",
-        "GREEN (F)",
-        "BLUE (F)",
-        "BLACK (F)"
+      "matchedStates": [
+        "RED"
       ]
     },
     {
       "inputs": {
         "r": 1,
         "g": 0,
-        "b": 0
+        "b": 1
       },
-      "performedOn": "2017-04-28T15:15:56.504Z",
+      "performedOn": "2017-05-03T13:37:37.500Z",
       "performedDecisions": [
-        "RED()"
+        "MAGENTA"
       ],
-      "eval": "FFFTFFFF",
-      "states": [
-        "YELLOW (F)",
-        "CYAN (F)",
-        "MAGENTA (F)",
-        "WHITE (F)",
-        "RED (T)",
-        "GREEN (F)",
-        "BLUE (F)",
-        "BLACK (F)"
-      ]
-    },
-    {
-      "inputs": {
-        "r": 1,
-        "g": 0,
-        "b": 0
-      },
-      "performedOn": "2017-04-28T15:15:56.510Z",
-      "performedDecisions": [
-        "RED()"
-      ],
-      "eval": "FFFTFFFF",
-      "states": [
-        "YELLOW (F)",
-        "CYAN (F)",
-        "MAGENTA (F)",
-        "WHITE (F)",
-        "RED (T)",
-        "GREEN (F)",
-        "BLUE (F)",
-        "BLACK (F)"
-      ]
-    },
-    {
-      "inputs": {
-        "r": 0,
-        "g": 0,
-        "b": 0
-      },
-      "performedOn": "2017-04-28T15:15:56.517Z",
-      "performedDecisions": [
-        "BLACK()"
-      ],
-      "eval": "TFFFFFFF",
-      "states": [
-        "YELLOW (F)",
-        "CYAN (F)",
-        "MAGENTA (F)",
-        "WHITE (F)",
-        "RED (F)",
-        "GREEN (F)",
-        "BLUE (F)",
-        "BLACK (T)"
+      "matchedStates": [
+        "MAGENTA"
       ]
     },
     {
@@ -548,196 +139,12 @@
         "g": 0,
         "b": 1
       },
-      "performedOn": "2017-04-28T15:15:56.520Z",
+      "performedOn": "2017-05-03T13:37:37.502Z",
       "performedDecisions": [
-        "BLUE()"
+        "BLUE"
       ],
-      "eval": "FTFFFFFF",
-      "states": [
-        "YELLOW (F)",
-        "CYAN (F)",
-        "MAGENTA (F)",
-        "WHITE (F)",
-        "RED (F)",
-        "GREEN (F)",
-        "BLUE (T)",
-        "BLACK (F)"
-      ]
-    },
-    {
-      "inputs": {
-        "r": 0,
-        "g": 0,
-        "b": 0
-      },
-      "performedOn": "2017-04-28T15:15:56.523Z",
-      "performedDecisions": [
-        "BLACK()"
-      ],
-      "eval": "TFFFFFFF",
-      "states": [
-        "YELLOW (F)",
-        "CYAN (F)",
-        "MAGENTA (F)",
-        "WHITE (F)",
-        "RED (F)",
-        "GREEN (F)",
-        "BLUE (F)",
-        "BLACK (T)"
-      ]
-    },
-    {
-      "inputs": {
-        "r": 0,
-        "g": 0,
-        "b": 1
-      },
-      "performedOn": "2017-04-28T15:15:56.525Z",
-      "performedDecisions": [
-        "BLUE()"
-      ],
-      "eval": "FTFFFFFF",
-      "states": [
-        "YELLOW (F)",
-        "CYAN (F)",
-        "MAGENTA (F)",
-        "WHITE (F)",
-        "RED (F)",
-        "GREEN (F)",
-        "BLUE (T)",
-        "BLACK (F)"
-      ]
-    },
-    {
-      "inputs": {
-        "r": 0,
-        "g": 1,
-        "b": 0
-      },
-      "performedOn": "2017-04-28T15:15:56.527Z",
-      "performedDecisions": [
-        "GREEN()"
-      ],
-      "eval": "FFTFFFFF",
-      "states": [
-        "YELLOW (F)",
-        "CYAN (F)",
-        "MAGENTA (F)",
-        "WHITE (F)",
-        "RED (F)",
-        "GREEN (T)",
-        "BLUE (F)",
-        "BLACK (F)"
-      ]
-    },
-    {
-      "inputs": {
-        "r": 0,
-        "g": 1,
-        "b": 0
-      },
-      "performedOn": "2017-04-28T15:15:56.529Z",
-      "performedDecisions": [
-        "GREEN()"
-      ],
-      "eval": "FFTFFFFF",
-      "states": [
-        "YELLOW (F)",
-        "CYAN (F)",
-        "MAGENTA (F)",
-        "WHITE (F)",
-        "RED (F)",
-        "GREEN (T)",
-        "BLUE (F)",
-        "BLACK (F)"
-      ]
-    },
-    {
-      "inputs": {
-        "r": 1,
-        "g": 0,
-        "b": 0
-      },
-      "performedOn": "2017-04-28T15:15:56.530Z",
-      "performedDecisions": [
-        "RED()"
-      ],
-      "eval": "FFFTFFFF",
-      "states": [
-        "YELLOW (F)",
-        "CYAN (F)",
-        "MAGENTA (F)",
-        "WHITE (F)",
-        "RED (T)",
-        "GREEN (F)",
-        "BLUE (F)",
-        "BLACK (F)"
-      ]
-    },
-    {
-      "inputs": {
-        "r": 0,
-        "g": 0,
-        "b": 0
-      },
-      "performedOn": "2017-04-28T15:15:56.532Z",
-      "performedDecisions": [
-        "BLACK()"
-      ],
-      "eval": "TFFFFFFF",
-      "states": [
-        "YELLOW (F)",
-        "CYAN (F)",
-        "MAGENTA (F)",
-        "WHITE (F)",
-        "RED (F)",
-        "GREEN (F)",
-        "BLUE (F)",
-        "BLACK (T)"
-      ]
-    },
-    {
-      "inputs": {
-        "r": 0,
-        "g": 0,
-        "b": 0
-      },
-      "performedOn": "2017-04-28T15:15:56.535Z",
-      "performedDecisions": [
-        "BLACK()"
-      ],
-      "eval": "TFFFFFFF",
-      "states": [
-        "YELLOW (F)",
-        "CYAN (F)",
-        "MAGENTA (F)",
-        "WHITE (F)",
-        "RED (F)",
-        "GREEN (F)",
-        "BLUE (F)",
-        "BLACK (T)"
-      ]
-    },
-    {
-      "inputs": {
-        "r": 0,
-        "g": 0,
-        "b": 1
-      },
-      "performedOn": "2017-04-28T15:15:56.536Z",
-      "performedDecisions": [
-        "BLUE()"
-      ],
-      "eval": "FTFFFFFF",
-      "states": [
-        "YELLOW (F)",
-        "CYAN (F)",
-        "MAGENTA (F)",
-        "WHITE (F)",
-        "RED (F)",
-        "GREEN (F)",
-        "BLUE (T)",
-        "BLACK (F)"
+      "matchedStates": [
+        "BLUE"
       ]
     },
     {
@@ -746,262 +153,12 @@
         "g": 1,
         "b": 1
       },
-      "performedOn": "2017-04-28T15:15:56.538Z",
+      "performedOn": "2017-05-03T13:37:37.505Z",
       "performedDecisions": [
-        "CYAN()"
+        "CYAN"
       ],
-      "eval": "FFFFFFTF",
-      "states": [
-        "YELLOW (F)",
-        "CYAN (T)",
-        "MAGENTA (F)",
-        "WHITE (F)",
-        "RED (F)",
-        "GREEN (F)",
-        "BLUE (F)",
-        "BLACK (F)"
-      ]
-    },
-    {
-      "inputs": {
-        "r": 0,
-        "g": 1,
-        "b": 0
-      },
-      "performedOn": "2017-04-28T15:15:56.540Z",
-      "performedDecisions": [
-        "GREEN()"
-      ],
-      "eval": "FFTFFFFF",
-      "states": [
-        "YELLOW (F)",
-        "CYAN (F)",
-        "MAGENTA (F)",
-        "WHITE (F)",
-        "RED (F)",
-        "GREEN (T)",
-        "BLUE (F)",
-        "BLACK (F)"
-      ]
-    },
-    {
-      "inputs": {
-        "r": 1,
-        "g": 1,
-        "b": 0
-      },
-      "performedOn": "2017-04-28T15:15:56.542Z",
-      "performedDecisions": [
-        "YELLOW()"
-      ],
-      "eval": "FFFFFFFT",
-      "states": [
-        "YELLOW (T)",
-        "CYAN (F)",
-        "MAGENTA (F)",
-        "WHITE (F)",
-        "RED (F)",
-        "GREEN (F)",
-        "BLUE (F)",
-        "BLACK (F)"
-      ]
-    },
-    {
-      "inputs": {
-        "r": 0,
-        "g": 1,
-        "b": 0
-      },
-      "performedOn": "2017-04-28T15:15:56.547Z",
-      "performedDecisions": [
-        "GREEN()"
-      ],
-      "eval": "FFTFFFFF",
-      "states": [
-        "YELLOW (F)",
-        "CYAN (F)",
-        "MAGENTA (F)",
-        "WHITE (F)",
-        "RED (F)",
-        "GREEN (T)",
-        "BLUE (F)",
-        "BLACK (F)"
-      ]
-    },
-    {
-      "inputs": {
-        "r": 1,
-        "g": 1,
-        "b": 1
-      },
-      "performedOn": "2017-04-28T15:15:56.549Z",
-      "performedDecisions": [
-        "WHITE()"
-      ],
-      "eval": "FFFFTFFF",
-      "states": [
-        "YELLOW (F)",
-        "CYAN (F)",
-        "MAGENTA (F)",
-        "WHITE (T)",
-        "RED (F)",
-        "GREEN (F)",
-        "BLUE (F)",
-        "BLACK (F)"
-      ]
-    },
-    {
-      "inputs": {
-        "r": 1,
-        "g": 0,
-        "b": 0
-      },
-      "performedOn": "2017-04-28T15:15:56.553Z",
-      "performedDecisions": [
-        "RED()"
-      ],
-      "eval": "FFFTFFFF",
-      "states": [
-        "YELLOW (F)",
-        "CYAN (F)",
-        "MAGENTA (F)",
-        "WHITE (F)",
-        "RED (T)",
-        "GREEN (F)",
-        "BLUE (F)",
-        "BLACK (F)"
-      ]
-    },
-    {
-      "inputs": {
-        "r": 0,
-        "g": 0,
-        "b": 0
-      },
-      "performedOn": "2017-04-28T15:15:56.554Z",
-      "performedDecisions": [
-        "BLACK()"
-      ],
-      "eval": "TFFFFFFF",
-      "states": [
-        "YELLOW (F)",
-        "CYAN (F)",
-        "MAGENTA (F)",
-        "WHITE (F)",
-        "RED (F)",
-        "GREEN (F)",
-        "BLUE (F)",
-        "BLACK (T)"
-      ]
-    },
-    {
-      "inputs": {
-        "r": 1,
-        "g": 0,
-        "b": 0
-      },
-      "performedOn": "2017-04-28T15:15:56.556Z",
-      "performedDecisions": [
-        "RED()"
-      ],
-      "eval": "FFFTFFFF",
-      "states": [
-        "YELLOW (F)",
-        "CYAN (F)",
-        "MAGENTA (F)",
-        "WHITE (F)",
-        "RED (T)",
-        "GREEN (F)",
-        "BLUE (F)",
-        "BLACK (F)"
-      ]
-    },
-    {
-      "inputs": {
-        "r": 1,
-        "g": 1,
-        "b": 0
-      },
-      "performedOn": "2017-04-28T15:15:56.566Z",
-      "performedDecisions": [
-        "YELLOW()"
-      ],
-      "eval": "FFFFFFFT",
-      "states": [
-        "YELLOW (T)",
-        "CYAN (F)",
-        "MAGENTA (F)",
-        "WHITE (F)",
-        "RED (F)",
-        "GREEN (F)",
-        "BLUE (F)",
-        "BLACK (F)"
-      ]
-    },
-    {
-      "inputs": {
-        "r": 1,
-        "g": 1,
-        "b": 1
-      },
-      "performedOn": "2017-04-28T15:15:56.593Z",
-      "performedDecisions": [
-        "WHITE()"
-      ],
-      "eval": "FFFFTFFF",
-      "states": [
-        "YELLOW (F)",
-        "CYAN (F)",
-        "MAGENTA (F)",
-        "WHITE (T)",
-        "RED (F)",
-        "GREEN (F)",
-        "BLUE (F)",
-        "BLACK (F)"
-      ]
-    },
-    {
-      "inputs": {
-        "r": 1,
-        "g": 0,
-        "b": 0
-      },
-      "performedOn": "2017-04-28T15:15:56.595Z",
-      "performedDecisions": [
-        "RED()"
-      ],
-      "eval": "FFFTFFFF",
-      "states": [
-        "YELLOW (F)",
-        "CYAN (F)",
-        "MAGENTA (F)",
-        "WHITE (F)",
-        "RED (T)",
-        "GREEN (F)",
-        "BLUE (F)",
-        "BLACK (F)"
-      ]
-    },
-    {
-      "inputs": {
-        "r": 0,
-        "g": 0,
-        "b": 1
-      },
-      "performedOn": "2017-04-28T15:15:56.597Z",
-      "performedDecisions": [
-        "BLUE()"
-      ],
-      "eval": "FTFFFFFF",
-      "states": [
-        "YELLOW (F)",
-        "CYAN (F)",
-        "MAGENTA (F)",
-        "WHITE (F)",
-        "RED (F)",
-        "GREEN (F)",
-        "BLUE (T)",
-        "BLACK (F)"
+      "matchedStates": [
+        "CYAN"
       ]
     },
     {
@@ -1010,218 +167,12 @@
         "g": 1,
         "b": 1
       },
-      "performedOn": "2017-04-28T15:15:56.599Z",
+      "performedOn": "2017-05-03T13:37:37.510Z",
       "performedDecisions": [
-        "CYAN()"
+        "CYAN"
       ],
-      "eval": "FFFFFFTF",
-      "states": [
-        "YELLOW (F)",
-        "CYAN (T)",
-        "MAGENTA (F)",
-        "WHITE (F)",
-        "RED (F)",
-        "GREEN (F)",
-        "BLUE (F)",
-        "BLACK (F)"
-      ]
-    },
-    {
-      "inputs": {
-        "r": 0,
-        "g": 1,
-        "b": 0
-      },
-      "performedOn": "2017-04-28T15:15:56.606Z",
-      "performedDecisions": [
-        "GREEN()"
-      ],
-      "eval": "FFTFFFFF",
-      "states": [
-        "YELLOW (F)",
-        "CYAN (F)",
-        "MAGENTA (F)",
-        "WHITE (F)",
-        "RED (F)",
-        "GREEN (T)",
-        "BLUE (F)",
-        "BLACK (F)"
-      ]
-    },
-    {
-      "inputs": {
-        "r": 1,
-        "g": 1,
-        "b": 1
-      },
-      "performedOn": "2017-04-28T15:15:56.608Z",
-      "performedDecisions": [
-        "WHITE()"
-      ],
-      "eval": "FFFFTFFF",
-      "states": [
-        "YELLOW (F)",
-        "CYAN (F)",
-        "MAGENTA (F)",
-        "WHITE (T)",
-        "RED (F)",
-        "GREEN (F)",
-        "BLUE (F)",
-        "BLACK (F)"
-      ]
-    },
-    {
-      "inputs": {
-        "r": 1,
-        "g": 1,
-        "b": 1
-      },
-      "performedOn": "2017-04-28T15:15:56.610Z",
-      "performedDecisions": [
-        "WHITE()"
-      ],
-      "eval": "FFFFTFFF",
-      "states": [
-        "YELLOW (F)",
-        "CYAN (F)",
-        "MAGENTA (F)",
-        "WHITE (T)",
-        "RED (F)",
-        "GREEN (F)",
-        "BLUE (F)",
-        "BLACK (F)"
-      ]
-    },
-    {
-      "inputs": {
-        "r": 1,
-        "g": 1,
-        "b": 0
-      },
-      "performedOn": "2017-04-28T15:15:56.612Z",
-      "performedDecisions": [
-        "YELLOW()"
-      ],
-      "eval": "FFFFFFFT",
-      "states": [
-        "YELLOW (T)",
-        "CYAN (F)",
-        "MAGENTA (F)",
-        "WHITE (F)",
-        "RED (F)",
-        "GREEN (F)",
-        "BLUE (F)",
-        "BLACK (F)"
-      ]
-    },
-    {
-      "inputs": {
-        "r": 1,
-        "g": 0,
-        "b": 0
-      },
-      "performedOn": "2017-04-28T15:15:56.613Z",
-      "performedDecisions": [
-        "RED()"
-      ],
-      "eval": "FFFTFFFF",
-      "states": [
-        "YELLOW (F)",
-        "CYAN (F)",
-        "MAGENTA (F)",
-        "WHITE (F)",
-        "RED (T)",
-        "GREEN (F)",
-        "BLUE (F)",
-        "BLACK (F)"
-      ]
-    },
-    {
-      "inputs": {
-        "r": 0,
-        "g": 0,
-        "b": 0
-      },
-      "performedOn": "2017-04-28T15:15:56.614Z",
-      "performedDecisions": [
-        "BLACK()"
-      ],
-      "eval": "TFFFFFFF",
-      "states": [
-        "YELLOW (F)",
-        "CYAN (F)",
-        "MAGENTA (F)",
-        "WHITE (F)",
-        "RED (F)",
-        "GREEN (F)",
-        "BLUE (F)",
-        "BLACK (T)"
-      ]
-    },
-    {
-      "inputs": {
-        "r": 0,
-        "g": 1,
-        "b": 0
-      },
-      "performedOn": "2017-04-28T15:15:56.616Z",
-      "performedDecisions": [
-        "GREEN()"
-      ],
-      "eval": "FFTFFFFF",
-      "states": [
-        "YELLOW (F)",
-        "CYAN (F)",
-        "MAGENTA (F)",
-        "WHITE (F)",
-        "RED (F)",
-        "GREEN (T)",
-        "BLUE (F)",
-        "BLACK (F)"
-      ]
-    },
-    {
-      "inputs": {
-        "r": 1,
-        "g": 1,
-        "b": 1
-      },
-      "performedOn": "2017-04-28T15:15:56.624Z",
-      "performedDecisions": [
-        "WHITE()"
-      ],
-      "eval": "FFFFTFFF",
-      "states": [
-        "YELLOW (F)",
-        "CYAN (F)",
-        "MAGENTA (F)",
-        "WHITE (T)",
-        "RED (F)",
-        "GREEN (F)",
-        "BLUE (F)",
-        "BLACK (F)"
-      ]
-    },
-    {
-      "inputs": {
-        "r": 0,
-        "g": 0,
-        "b": 1
-      },
-      "performedOn": "2017-04-28T15:15:56.626Z",
-      "performedDecisions": [
-        "BLUE()"
-      ],
-      "eval": "FTFFFFFF",
-      "states": [
-        "YELLOW (F)",
-        "CYAN (F)",
-        "MAGENTA (F)",
-        "WHITE (F)",
-        "RED (F)",
-        "GREEN (F)",
-        "BLUE (T)",
-        "BLACK (F)"
+      "matchedStates": [
+        "CYAN"
       ]
     }
   ]

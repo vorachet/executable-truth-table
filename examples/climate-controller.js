@@ -33,20 +33,21 @@ function HeatOn() {
 }
 
 const ttable = new TTABLE()
+ttable.disjunctionMode()
 ttable
+    .setCondition({state: "Cold", equation: "tempSensor < DESIRED_TEMP"})
     .setCondition({state: "Hot", equation: "tempSensor > DESIRED_TEMP"})
     .setCondition({state: "Dry", equation: "humiditySensor < DESIRED_HUMIDITY"})
-    .setDecision({run: [HeatOn],          if: [{state: "Dry", is: true}, {state: "Hot", is: false}]})
-    .setDecision({run: [HumidOn, CoolOn], if: [{state: "Dry", is: true}, {state: "Hot", is: true}]})
-    .setDecision({run: [CoolOn],          if: [{state: "Hot", is: true}, {state: "Dry", is: false}]})
-    .setDecision({run: [HeatOn, HumidOn], if: [{state: "Hot", is: false}, {state: "Dry", is: false}]})
+    .setDecision({run: [CoolOn], if: ["Cold"]})
+    .setDecision({run: [HeatOn], if: ["Hot"]})
+    .setDecision({run: [HumidOn],if: ["Dry"]})
 
 fs.writeFileSync(__dirname + '/climate-controller_spec.html', ttable.exportSpecAsHTML(), 'utf-8')
 
-ttable.read({DESIRED_TEMP: 70, DESIRED_HUMIDITY: 40, tempSensor: 40, humiditySensor: 80 })
-ttable.read({DESIRED_TEMP: 70, DESIRED_HUMIDITY: 40, tempSensor: 80, humiditySensor: 20})
-ttable.read({DESIRED_TEMP: 70, DESIRED_HUMIDITY: 40, tempSensor: 100, humiditySensor: 50})
-ttable.read({DESIRED_TEMP: 70, DESIRED_HUMIDITY: 40, tempSensor: 10, humiditySensor: 10})
+ttable.eval({DESIRED_TEMP: 70, DESIRED_HUMIDITY: 40, tempSensor: 40, humiditySensor: 80 })
+ttable.eval({DESIRED_TEMP: 70, DESIRED_HUMIDITY: 40, tempSensor: 80, humiditySensor: 20})
+ttable.eval({DESIRED_TEMP: 70, DESIRED_HUMIDITY: 40, tempSensor: 100, humiditySensor: 50})
+ttable.eval({DESIRED_TEMP: 70, DESIRED_HUMIDITY: 40, tempSensor: 10, humiditySensor: 10})
 
 fs.writeFileSync(__dirname + '/climate-controller_statistics.html', ttable.exportStatAsHTML(), 'utf-8')
 

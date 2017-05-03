@@ -1,0 +1,106 @@
+{
+  "decisions": [],
+  "conditions": [
+    {
+      "state": "VETERAN",
+      "equation": "isVeteran  > 0"
+    },
+    {
+      "state": "POOR",
+      "equation": "monthlyWage  <= 6000"
+    },
+    {
+      "state": "MIDDLE_CLASS",
+      "equation": "(monthlyWage  > 6000)(monthlyWage < 15000)"
+    },
+    {
+      "state": "UPPER_MIDDLE_CLASS",
+      "equation": "monthlyWage  >= 15000"
+    }
+  ],
+  "performed": [
+    {
+      "inputs": {
+        "monthlyWage": 5000,
+        "isVeteran": 1
+      },
+      "performedOn": "2017-05-03T14:59:47.168Z",
+      "performedDecisions": [
+        "LifetimeFreeBusService",
+        "DaytimeFreeBusService",
+        "FreeLunchSevice"
+      ],
+      "matchedStates": [
+        "VETERAN",
+        "POOR"
+      ]
+    },
+    {
+      "inputs": {
+        "monthlyWage": 5000,
+        "isVeteran": 0
+      },
+      "performedOn": "2017-05-03T14:59:47.270Z",
+      "performedDecisions": [
+        "DaytimeFreeBusService",
+        "FreeLunchSevice"
+      ],
+      "matchedStates": [
+        "POOR"
+      ]
+    },
+    {
+      "inputs": {
+        "monthlyWage": 7000,
+        "isVeteran": 1
+      },
+      "performedOn": "2017-05-03T14:59:47.272Z",
+      "performedDecisions": [
+        "LifetimeFreeBusService",
+        "FiftyPercentDiscountBusServiceOnWeekend"
+      ],
+      "matchedStates": [
+        "VETERAN",
+        "MIDDLE_CLASS"
+      ]
+    },
+    {
+      "inputs": {
+        "monthlyWage": 8000,
+        "isVeteran": 0
+      },
+      "performedOn": "2017-05-03T14:59:47.274Z",
+      "performedDecisions": [
+        "FiftyPercentDiscountBusServiceOnWeekend"
+      ],
+      "matchedStates": [
+        "MIDDLE_CLASS"
+      ]
+    },
+    {
+      "inputs": {
+        "monthlyWage": 15000,
+        "isVeteran": 0
+      },
+      "performedOn": "2017-05-03T14:59:47.276Z",
+      "performedDecisions": [],
+      "matchedStates": [
+        "UPPER_MIDDLE_CLASS"
+      ]
+    },
+    {
+      "inputs": {
+        "monthlyWage": 15000,
+        "isVeteran": 1
+      },
+      "performedOn": "2017-05-03T14:59:47.277Z",
+      "performedDecisions": [
+        "LifetimeFreeBusService"
+      ],
+      "matchedStates": [
+        "VETERAN",
+        "UPPER_MIDDLE_CLASS"
+      ]
+    }
+  ]
+}

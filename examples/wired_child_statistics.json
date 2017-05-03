@@ -1,97 +1,156 @@
 {
-  "decisions": [
-    {
-      "decisions": [
-        "ChildDecision1()"
-      ],
-      "if": [
-        {
-          "state": "ChildS1",
-          "is": true
-        }
-      ]
-    },
-    {
-      "decisions": [
-        "ChildDecision2()"
-      ],
-      "if": [
-        {
-          "state": "ChildS2",
-          "is": true
-        }
-      ]
-    }
-  ],
+  "decisions": [],
   "conditions": [
     {
-      "state": "ChildS1",
-      "equation": "a * c < 100"
+      "state": "VisitFirstTimet",
+      "equation": "monthlyFacebooCheckin == 0"
     },
     {
-      "state": "ChildS2",
-      "equation": "a * c > 100"
+      "state": "VisitSometime",
+      "equation": "(monthlyFacebooCheckin > 0)(monthlyFacebooCheckin > 10)"
+    },
+    {
+      "state": "VisitOften",
+      "equation": "monthlyFacebooCheckin >= 10"
+    },
+    {
+      "state": "VisitedFoodCourtToday",
+      "equation": "visitedFoodCourtToday >= 1"
+    },
+    {
+      "state": "VisitedFashionStoreToday",
+      "equation": "visitedFashionStoreToday >= 1"
+    },
+    {
+      "state": "VisitedElectronicStoreToday",
+      "equation": "visitedElectronicStoreToday >= 1"
     }
   ],
   "performed": [
     {
       "inputs": {
-        "a": 5,
-        "c": 1
+        "point": 50,
+        "monthlyFacebooCheckin": 0,
+        "visitedFoodCourtToday": 1,
+        "visitedFashionStoreToday": 0,
+        "visitedElectronicStoreToday": 0,
+        "type": "normal"
       },
-      "performedOn": "2017-04-28T15:15:59.363Z",
+      "performedOn": "2017-05-03T14:37:23.730Z",
       "performedDecisions": [
-        "ChildDecision1()"
+        "WelcomeSMS",
+        "IntroduceFoodCourtEvent"
       ],
-      "eval": "FT",
-      "states": [
-        "ChildS1 (T)",
-        "ChildS2 (F)"
+      "matchedStates": [
+        "VisitFirstTimet",
+        "VisitedFoodCourtToday"
       ]
     },
     {
       "inputs": {
-        "a": 20,
-        "c": 1
+        "point": 50,
+        "monthlyFacebooCheckin": 10,
+        "visitedFoodCourtToday": 1,
+        "visitedFashionStoreToday": 1,
+        "visitedElectronicStoreToday": 0,
+        "type": "normal"
       },
-      "performedOn": "2017-04-28T15:15:59.365Z",
+      "performedOn": "2017-05-03T14:37:23.743Z",
       "performedDecisions": [
-        "ChildDecision1()"
+        "WelcomeBestCustomer",
+        "IntroduceFoodCourtEvent",
+        "IntroduceFashionStoreEvent"
       ],
-      "eval": "FT",
-      "states": [
-        "ChildS1 (T)",
-        "ChildS2 (F)"
+      "matchedStates": [
+        "VisitOften",
+        "VisitedFoodCourtToday",
+        "VisitedFashionStoreToday"
       ]
     },
     {
       "inputs": {
-        "a": 5,
-        "c": 100
+        "point": 50,
+        "monthlyFacebooCheckin": 30,
+        "visitedFoodCourtToday": 1,
+        "visitedFashionStoreToday": 2,
+        "visitedElectronicStoreToday": 0,
+        "type": "normal"
       },
-      "performedOn": "2017-04-28T15:15:59.368Z",
+      "performedOn": "2017-05-03T14:37:23.746Z",
       "performedDecisions": [
-        "ChildDecision2()"
+        "WelcomeGoodCustomer",
+        "WelcomeBestCustomer",
+        "IntroduceFoodCourtEvent",
+        "IntroduceFashionStoreEvent"
       ],
-      "eval": "TF",
-      "states": [
-        "ChildS1 (F)",
-        "ChildS2 (T)"
+      "matchedStates": [
+        "VisitSometime",
+        "VisitOften",
+        "VisitedFoodCourtToday",
+        "VisitedFashionStoreToday"
       ]
     },
     {
       "inputs": {
-        "a": 20,
-        "c": 100
+        "point": 120,
+        "monthlyFacebooCheckin": 0,
+        "visitedFoodCourtToday": 1,
+        "visitedFashionStoreToday": 0,
+        "visitedElectronicStoreToday": 1,
+        "type": "vip"
       },
-      "performedOn": "2017-04-28T15:15:59.370Z",
+      "performedOn": "2017-05-03T14:37:23.750Z",
       "performedDecisions": [
-        "ChildDecision2()"
+        "WelcomeSMS",
+        "IntroduceFoodCourtEvent",
+        "IntroduceElectronicStoreEvent"
       ],
-      "eval": "TF",
-      "states": [
-        "ChildS1 (F)",
-        "ChildS2 (T)"
+      "matchedStates": [
+        "VisitFirstTimet",
+        "VisitedFoodCourtToday",
+        "VisitedElectronicStoreToday"
+      ]
+    },
+    {
+      "inputs": {
+        "point": 120,
+        "monthlyFacebooCheckin": 6,
+        "visitedFoodCourtToday": 1,
+        "visitedFashionStoreToday": 1,
+        "visitedElectronicStoreToday": 1,
+        "type": "vip"
+      },
+      "performedOn": "2017-05-03T14:37:23.754Z",
+      "performedDecisions": [
+        "IntroduceFoodCourtEvent",
+        "IntroduceFashionStoreEvent",
+        "IntroduceElectronicStoreEvent"
+      ],
+      "matchedStates": [
+        "VisitedFoodCourtToday",
+        "VisitedFashionStoreToday",
+        "VisitedElectronicStoreToday"
+      ]
+    },
+    {
+      "inputs": {
+        "point": 120,
+        "monthlyFacebooCheckin": 50,
+        "visitedFoodCourtToday": 1,
+        "visitedFashionStoreToday": 0,
+        "visitedElectronicStoreToday": 0,
+        "type": "vip"
+      },
+      "performedOn": "2017-05-03T14:37:23.758Z",
+      "performedDecisions": [
+        "WelcomeGoodCustomer",
+        "WelcomeBestCustomer",
+        "IntroduceFoodCourtEvent"
+      ],
+      "matchedStates": [
+        "VisitSometime",
+        "VisitOften",
+        "VisitedFoodCourtToday"
       ]
     }
   ]

@@ -1,69 +1,10 @@
 {
-  "decisions": [
-    {
-      "decisions": [
-        "HeatOn()"
-      ],
-      "if": [
-        {
-          "state": "Dry",
-          "is": true
-        },
-        {
-          "state": "Hot",
-          "is": false
-        }
-      ]
-    },
-    {
-      "decisions": [
-        "HumidOn()",
-        "CoolOn()"
-      ],
-      "if": [
-        {
-          "state": "Dry",
-          "is": true
-        },
-        {
-          "state": "Hot",
-          "is": true
-        }
-      ]
-    },
-    {
-      "decisions": [
-        "CoolOn()"
-      ],
-      "if": [
-        {
-          "state": "Hot",
-          "is": true
-        },
-        {
-          "state": "Dry",
-          "is": false
-        }
-      ]
-    },
-    {
-      "decisions": [
-        "HeatOn()",
-        "HumidOn()"
-      ],
-      "if": [
-        {
-          "state": "Hot",
-          "is": false
-        },
-        {
-          "state": "Dry",
-          "is": false
-        }
-      ]
-    }
-  ],
+  "decisions": [],
   "conditions": [
+    {
+      "state": "Cold",
+      "equation": "tempSensor < DESIRED_TEMP"
+    },
     {
       "state": "Hot",
       "equation": "tempSensor > DESIRED_TEMP"
@@ -81,15 +22,12 @@
         "tempSensor": 40,
         "humiditySensor": 80
       },
-      "performedOn": "2017-04-28T19:04:12.630Z",
+      "performedOn": "2017-05-03T14:59:39.315Z",
       "performedDecisions": [
-        "HeatOn()",
-        "HumidOn()"
+        "CoolOn"
       ],
-      "eval": "FF",
-      "states": [
-        "Hot (F)",
-        "Dry (F)"
+      "matchedStates": [
+        "Cold"
       ]
     },
     {
@@ -99,15 +37,14 @@
         "tempSensor": 80,
         "humiditySensor": 20
       },
-      "performedOn": "2017-04-28T19:04:12.752Z",
+      "performedOn": "2017-05-03T14:59:39.403Z",
       "performedDecisions": [
-        "HumidOn()",
-        "CoolOn()"
+        "HeatOn",
+        "HumidOn"
       ],
-      "eval": "TT",
-      "states": [
-        "Hot (T)",
-        "Dry (T)"
+      "matchedStates": [
+        "Hot",
+        "Dry"
       ]
     },
     {
@@ -117,14 +54,12 @@
         "tempSensor": 100,
         "humiditySensor": 50
       },
-      "performedOn": "2017-04-28T19:04:12.753Z",
+      "performedOn": "2017-05-03T14:59:39.405Z",
       "performedDecisions": [
-        "CoolOn()"
+        "HeatOn"
       ],
-      "eval": "FT",
-      "states": [
-        "Hot (T)",
-        "Dry (F)"
+      "matchedStates": [
+        "Hot"
       ]
     },
     {
@@ -134,14 +69,14 @@
         "tempSensor": 10,
         "humiditySensor": 10
       },
-      "performedOn": "2017-04-28T19:04:12.755Z",
+      "performedOn": "2017-05-03T14:59:39.407Z",
       "performedDecisions": [
-        "HeatOn()"
+        "CoolOn",
+        "HumidOn"
       ],
-      "eval": "TF",
-      "states": [
-        "Hot (F)",
-        "Dry (T)"
+      "matchedStates": [
+        "Cold",
+        "Dry"
       ]
     }
   ]

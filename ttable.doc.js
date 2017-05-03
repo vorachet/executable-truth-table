@@ -42,10 +42,10 @@ function printActionsMap (decisions, dimension) {
     const re = new RegExp(Object.keys(inputs).join('|'), 'gi')
     bitString = bitString.replace(re, matched => inputs[matched])
     const ckeys = bitString.split('')
-    bitString = ckeys.reverse().join('')
+    bitString = ckeys.join('')
     const col = decisions[bitString]
-      ? `<td align="center">${_.map(decisions[bitString], act => `${act.name}()<br>`).join('')}</td>`
-      : '<td></td>'
+      ? `<td align="center"><strong>${_.map(decisions[bitString], act => `${act.name}()<br>`).join('')}</strong></td>`
+      : '<td align="center">-</td>'
     text += col
     i += 1
   }
@@ -57,7 +57,7 @@ function padZero (n, dimension, join) {
 }
 
 module.exports = {
-  exportSpecAsHTML: function (conditions, decisions, tableCSSClass) {
+  exportSpecAsHTML: function (mode, conditions, decisions, tableCSSClass) {
     let prop = tableCSSClass ? '' : DEFAULT_HTML_TABLE_PROPS
     let html = ''
     html += `<table ${prop} style="white-space:nowrap;" class="${tableCSSClass}">`
@@ -69,12 +69,13 @@ module.exports = {
                       `<td align="center">${equation.state}</td>${
                       printBinaryColumn(conditions.length, index)
                   }</tr>`).join('')
-    html += `<tr><td></td><td></td>${printActionsMap(decisions, conditions.length)}</tr>`
+
+    html += `<tr><td align="center">Truth Table Mode = ${mode}</td><td></td>${printActionsMap(decisions, conditions.length)}</tr>`
     html += '</tbody>'
     html += '</table>'
     return html
   },
-  exportStatAsHTML: function (statistics, tableCSSClass) {
+  exportStatAsHTML: function (mode, statistics, tableCSSClass) {
     let prop = tableCSSClass ? '' : DEFAULT_HTML_TABLE_PROPS
     let html = ''
     html += `<table ${prop} style="white-space:nowrap;" class="${tableCSSClass}">`
@@ -87,8 +88,8 @@ module.exports = {
     html += _.map(statistics.performed, (record, index) =>
           `<tr>` +
             `<td>${_.map(record.inputs, (v, k) => `${k} = ${v}`).join('<br>')}</td>` +
-            `<td>${_.map(record.states, (state) => state).join('<br>')}</td>` +
-            `<td>${_.map(record.performedDecisions, (act) => act).join('<br>')}</td>` +
+            `<td>${_.map(record.matchedStates, (state) => `${state}`).join('<br>')}</td>` +
+            `<td>${_.map(record.performedDecisions, (act) => '<b>' + act + '()</b>').join('<br>')}</td>` +
           `</tr>`
         ).join('')
     html += '</tbody>'
