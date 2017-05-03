@@ -117,6 +117,8 @@ TTABLE.prototype.setDecision = function (decision) {
   _.each(decision.run, function (fn) {
     self.decisions[decisionKey].push(fn)
     self.decisions[decisionKey] = _.uniq(self.decisions[decisionKey])
+    self.statistics.decisions.push(fn.name)
+    self.statistics.decisions = _.uniq(self.statistics.decisions)
   })
 
   debug('setDecision(%s): %s run %o if %s', 'mode=' + this.mode, decisionKey, decision.run, decision.if)

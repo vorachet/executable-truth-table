@@ -1,5 +1,9 @@
 {
-  "decisions": [],
+  "decisions": [
+    "CoolOn",
+    "HeatOn",
+    "HumidOn"
+  ],
   "conditions": [
     {
       "state": "Cold",
@@ -22,7 +26,7 @@
         "tempSensor": 40,
         "humiditySensor": 80
       },
-      "performedOn": "2017-05-03T16:16:24.885Z",
+      "performedOn": "2017-05-03T16:37:03.897Z",
       "performedDecisions": [
         "HeatOn"
       ],
@@ -37,7 +41,7 @@
         "tempSensor": 80,
         "humiditySensor": 20
       },
-      "performedOn": "2017-05-03T16:16:24.990Z",
+      "performedOn": "2017-05-03T16:37:03.996Z",
       "performedDecisions": [
         "CoolOn",
         "HumidOn"
@@ -54,7 +58,7 @@
         "tempSensor": 100,
         "humiditySensor": 50
       },
-      "performedOn": "2017-05-03T16:16:24.992Z",
+      "performedOn": "2017-05-03T16:37:03.997Z",
       "performedDecisions": [
         "CoolOn"
       ],
@@ -69,7 +73,7 @@
         "tempSensor": 10,
         "humiditySensor": 10
       },
-      "performedOn": "2017-05-03T16:16:24.994Z",
+      "performedOn": "2017-05-03T16:37:04.000Z",
       "performedDecisions": [
         "HeatOn",
         "HumidOn"

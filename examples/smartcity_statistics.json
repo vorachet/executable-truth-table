@@ -1,5 +1,10 @@
 {
-  "decisions": [],
+  "decisions": [
+    "LifetimeFreeBusService",
+    "DaytimeFreeBusService",
+    "FreeLunchSevice",
+    "FiftyPercentDiscountBusServiceOnWeekend"
+  ],
   "conditions": [
     {
       "state": "VETERAN",
@@ -24,7 +29,7 @@
         "monthlyWage": 5000,
         "isVeteran": 1
       },
-      "performedOn": "2017-05-03T14:59:47.168Z",
+      "performedOn": "2017-05-03T16:37:26.333Z",
       "performedDecisions": [
         "LifetimeFreeBusService",
         "DaytimeFreeBusService",
@@ -40,7 +45,7 @@
         "monthlyWage": 5000,
         "isVeteran": 0
       },
-      "performedOn": "2017-05-03T14:59:47.270Z",
+      "performedOn": "2017-05-03T16:37:26.448Z",
       "performedDecisions": [
         "DaytimeFreeBusService",
         "FreeLunchSevice"
@@ -54,7 +59,7 @@
         "monthlyWage": 7000,
         "isVeteran": 1
       },
-      "performedOn": "2017-05-03T14:59:47.272Z",
+      "performedOn": "2017-05-03T16:37:26.452Z",
       "performedDecisions": [
         "LifetimeFreeBusService",
         "FiftyPercentDiscountBusServiceOnWeekend"
@@ -69,7 +74,7 @@
         "monthlyWage": 8000,
         "isVeteran": 0
       },
-      "performedOn": "2017-05-03T14:59:47.274Z",
+      "performedOn": "2017-05-03T16:37:26.454Z",
       "performedDecisions": [
         "FiftyPercentDiscountBusServiceOnWeekend"
       ],
@@ -82,7 +87,7 @@
         "monthlyWage": 15000,
         "isVeteran": 0
       },
-      "performedOn": "2017-05-03T14:59:47.276Z",
+      "performedOn": "2017-05-03T16:37:26.456Z",
       "performedDecisions": [],
       "matchedStates": [
         "UPPER_MIDDLE_CLASS"
@@ -93,7 +98,7 @@
         "monthlyWage": 15000,
         "isVeteran": 1
       },
-      "performedOn": "2017-05-03T14:59:47.277Z",
+      "performedOn": "2017-05-03T16:37:26.457Z",
       "performedDecisions": [
         "LifetimeFreeBusService"
       ],

@@ -40,9 +40,9 @@ ttable
 Set decisions
 ```javascript
 ttable
-    .setDecision({run: [CoolOn],  if: ["Cold"]})
-    .setDecision({run: [HeatOn],  if: ["Hot"]})
-    .setDecision({run: [HumidOn], if: ["Dry"]})
+    .setDecision({run: [CoolOn], if: ["Hot"]})
+    .setDecision({run: [HeatOn], if: ["Cold"]})
+    .setDecision({run: [HumidOn],if: ["Dry"]})
 ```
 
 Evaluate results
@@ -177,8 +177,6 @@ $ node climate-controller
 ttable.exportSpecAsHTML()
 ```
 
-![generated_spec](https://github.com/vorachet/executable-truth-table/blob/master/images/climate-controller_generated_spec.png)
-
 [View example specification table](https://htmlpreview.github.io/?https://github.com/vorachet/executable-truth-table/blob/master/examples/climate-controller_spec.html)
 
 ## Generating TruthTable statistic
@@ -186,8 +184,6 @@ ttable.exportSpecAsHTML()
 ```javascript
 ttable.exportStatAsHTML()
 ```
-
-![generated_statistic](https://github.com/vorachet/executable-truth-table/blob/master/images/climate-controller_generated_statistic.png)
 
 [View example statistic table](https://htmlpreview.github.io/?https://github.com/vorachet/executable-truth-table/blob/master/examples/climate-controller_statistics.html)
 
@@ -289,6 +285,8 @@ Output
 
 ## Smartcity Truth Table Example
 
+![generated_spec](https://github.com/vorachet/executable-truth-table/blob/master/images/smartcity_concept.png)
+
 ```javascript
 "use strict";
 
@@ -339,62 +337,14 @@ fs.writeFileSync(__dirname + '/smartcity_statistics.json', JSON.stringify(ttable
 
 ```
 
-## Colors Truth Table Example
+[View example specification table](https://htmlpreview.github.io/?https://github.com/vorachet/executable-truth-table/blob/master/examples/smartcity_spec.html)
 
+[View example statistic table](https://htmlpreview.github.io/?https://github.com/vorachet/executable-truth-table/blob/master/examples/smartcity_statistics.html)
 
-```javascript
-"use strict"
-
-process.env.DEBUG = '*'
-
-const debug = require('debug')('Simple')
-const fs = require('fs')
-const TTABLE = require('executable-truth-table')
-
-function YELLOW()  { debug('YELLOW()'  )}
-function CYAN()    { debug('CYAN()'    )}
-function MAGENTA() { debug('MAGENTA()' )}
-function WHITE()   { debug('WHITE()'   )}
-function RED()     { debug('RED()'     )}
-function GREEN()   { debug('GREEN()'   )}
-function BLUE()    { debug('BLUE()'    )}
-function BLACK()   { debug('BLACK()'   )}
-
-const ttable = new TTABLE()
-ttable.conjunctionMode()
-ttable
-  .setCondition({state: "YELLOW",  equation: "(r==1)(g==1)(b==0)"})
-  .setCondition({state: "CYAN",    equation: "(r==0)(g==1)(b==1)"})
-  .setCondition({state: "MAGENTA", equation: "(r==1)(g==0)(b==1)"})
-  .setCondition({state: "WHITE",   equation: "(r==1)(g==1)(b==1)"})
-  .setCondition({state: "RED",     equation: "(r==1)(g==0)(b==0)"})
-  .setCondition({state: "GREEN",   equation: "(r==0)(g==1)(b==0)"})
-  .setCondition({state: "BLUE",    equation: "(r==0)(g==0)(b==1)"})
-  .setCondition({state: "BLACK",   equation: "(r==0)(g==0)(b==0)"})
-  .setDecision({run: [YELLOW],  if: ["YELLOW"]})
-  .setDecision({run: [CYAN],    if: ["CYAN"]})
-  .setDecision({run: [MAGENTA], if: ["MAGENTA"]})
-  .setDecision({run: [RED],     if: ["RED"]})
-  .setDecision({run: [GREEN],   if: ["GREEN"]})
-  .setDecision({run: [BLUE],    if: ["BLUE"]})
-  .setDecision({run: [BLACK],   if: ["BLACK"]})
-  .setDecision({run: [WHITE],   if: ["WHITE"]})
-
-fs.writeFileSync(__dirname + '/colors_spec.html', ttable.exportSpecAsHTML(), 'utf-8');
-
-function random () { return Math.floor(Math.random() * 2) }
-
-for (let i = 0; i < 10; i++) {
-  ttable.eval({r: random(), g: random(), b: random()});
-}
-
-fs.writeFileSync(__dirname + '/colors_statistics.html', ttable.exportStatAsHTML(), 'utf-8');
-
-fs.writeFileSync(__dirname + '/colors_statistics.json', JSON.stringify(ttable.statistics, null, 2), 'utf-8')
-
-```
 
 ## Wired Truth Table Example
+
+![generated_spec](https://github.com/vorachet/executable-truth-table/blob/master/images/wiredconcept.png)
 
 
 ```javascript
@@ -416,37 +366,37 @@ shoppingMallVisit
   .setCondition({state: "VisitedFashionStoreToday",    equation: "visitedFashionStoreToday >= 1"})
   .setCondition({state: "VisitedElectronicStoreToday", equation: "visitedElectronicStoreToday >= 1"})
   .setDecision({if: ["VisitFirstTimet"], run: [
-    function WelcomeSMS (ttable) {
+    function SendWelcomeSMS (ttable) {
       if (ttable.type === 'vip') debug('SMS: Thank you for visiting our shoppingmall. Visit our mall next time get 2 Hours Free Parking')
       else debug('SMS: Thank you for visiting our shoppingmall')
     }]
   })
   .setDecision({if: ["VisitSometime"], run: [
-    function WelcomeGoodCustomer (ttable) {
+    function SendMemershipInfoSMS (ttable) {
       if (ttable.type === 'vip') debug('SMS: You Got 2 Hours Free Parking Today')
       else debug('SMS: Shop $100 Get Free Membership. More Info @ 5th floor')
     }]
   })
   .setDecision({if: ["VisitOften"], run: [
-    function WelcomeBestCustomer (ttable) {
+    function SendPromotionSMS (ttable) {
       if (ttable.type === 'vip') debug('SMS: You Got 5 Hours Free Parking Today. Enjoy!')
       else debug('SMS: Discount Starbuck 10% Code 98VC23')
     }]
   })
   .setDecision({if: ["VisitedFoodCourtToday"], run: [
-    function IntroduceFoodCourtEvent (ttable) {
+    function SendFoodCourtEventSMS (ttable) {
       if (ttable.type === 'vip') debug('SMS: Thank you for visiting our food court. You got free drink today. Code DR344')
       else debug('SMS: Thank you for visiting our food court')
     }]
   })
   .setDecision({if: ["VisitedFashionStoreToday"], run: [
-    function IntroduceFashionStoreEvent (ttable) {
+    function SendFashionStoreEventSMS (ttable) {
       if (ttable.type === 'vip') debug('SMS: Thank you for visiting our shop. Redeem your 100 points for free shoes today')
       else debug('SMS: Thank you for visiting our shop. Clearance Shoes, Clothing, Accessories & More Next week!')
     }]
   })
   .setDecision({if: ["VisitedElectronicStoreToday"], run: [
-    function IntroduceElectronicStoreEvent (ttable) {
+    function SendElectronicStoreEventSMS (ttable) {
       if (ttable.type === 'vip') debug('SMS: Thank you for visiting our store. Discount iPhone 10% for VIP member')
       else debug('SMS: Thank you for visiting our store')
     }]
@@ -490,3 +440,7 @@ fs.writeFileSync(__dirname + '/wired_child_statistics.html', shoppingMallVisit.e
 fs.writeFileSync(__dirname + '/wired_parent_statistics.json', JSON.stringify(customerScreen.statistics, null, 2), 'utf-8')
 fs.writeFileSync(__dirname + '/wired_child_statistics.json', JSON.stringify(shoppingMallVisit.statistics, null, 2), 'utf-8')
 ```
+
+[View example specification table](https://htmlpreview.github.io/?https://github.com/vorachet/executable-truth-table/blob/master/examples/wiredspec.html)
+
+[View example statistic table](https://htmlpreview.github.io/?https://github.com/vorachet/executable-truth-table/blob/master/examples/wiredstatistics.html)

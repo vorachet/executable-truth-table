@@ -5,8 +5,7 @@
   "main": "ttable.js",
   "scripts": {
     "test": "mocha tests/**/**.spec.js",
-    "lint": "eslint *.js -f table || true",
-    "lint:fix": "eslint ./ttable.js -f table --fix"
+    "lint": "eslint *.js -f table || true"
   },
    "repository": {
     "type": "git",

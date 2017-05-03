@@ -1,5 +1,14 @@
 {
-  "decisions": [],
+  "decisions": [
+    "YELLOW",
+    "CYAN",
+    "MAGENTA",
+    "RED",
+    "GREEN",
+    "BLUE",
+    "BLACK",
+    "WHITE"
+  ],
   "conditions": [
     {
       "state": "YELLOW",
@@ -37,67 +46,11 @@
   "performed": [
     {
       "inputs": {
-        "r": 0,
-        "g": 0,
-        "b": 0
-      },
-      "performedOn": "2017-05-03T13:37:37.344Z",
-      "performedDecisions": [
-        "BLACK"
-      ],
-      "matchedStates": [
-        "BLACK"
-      ]
-    },
-    {
-      "inputs": {
         "r": 1,
         "g": 0,
         "b": 1
       },
-      "performedOn": "2017-05-03T13:37:37.478Z",
-      "performedDecisions": [
-        "MAGENTA"
-      ],
-      "matchedStates": [
-        "MAGENTA"
-      ]
-    },
-    {
-      "inputs": {
-        "r": 0,
-        "g": 0,
-        "b": 1
-      },
-      "performedOn": "2017-05-03T13:37:37.483Z",
-      "performedDecisions": [
-        "BLUE"
-      ],
-      "matchedStates": [
-        "BLUE"
-      ]
-    },
-    {
-      "inputs": {
-        "r": 0,
-        "g": 1,
-        "b": 0
-      },
-      "performedOn": "2017-05-03T13:37:37.488Z",
-      "performedDecisions": [
-        "GREEN"
-      ],
-      "matchedStates": [
-        "GREEN"
-      ]
-    },
-    {
-      "inputs": {
-        "r": 1,
-        "g": 0,
-        "b": 1
-      },
-      "performedOn": "2017-05-03T13:37:37.492Z",
+      "performedOn": "2017-05-03T16:38:11.018Z",
       "performedDecisions": [
         "MAGENTA"
       ],
@@ -111,7 +64,7 @@
         "g": 0,
         "b": 0
       },
-      "performedOn": "2017-05-03T13:37:37.495Z",
+      "performedOn": "2017-05-03T16:38:11.160Z",
       "performedDecisions": [
         "RED"
       ],
@@ -125,26 +78,40 @@
         "g": 0,
         "b": 1
       },
-      "performedOn": "2017-05-03T13:37:37.500Z",
+      "performedOn": "2017-05-03T16:38:11.166Z",
       "performedDecisions": [
         "MAGENTA"
       ],
       "matchedStates": [
         "MAGENTA"
+      ]
+    },
+    {
+      "inputs": {
+        "r": 0,
+        "g": 1,
+        "b": 0
+      },
+      "performedOn": "2017-05-03T16:38:11.170Z",
+      "performedDecisions": [
+        "GREEN"
+      ],
+      "matchedStates": [
+        "GREEN"
       ]
     },
     {
       "inputs": {
         "r": 0,
         "g": 0,
-        "b": 1
+        "b": 0
       },
-      "performedOn": "2017-05-03T13:37:37.502Z",
+      "performedOn": "2017-05-03T16:38:11.174Z",
       "performedDecisions": [
-        "BLUE"
+        "BLACK"
       ],
       "matchedStates": [
-        "BLUE"
+        "BLACK"
       ]
     },
     {
@@ -153,7 +120,7 @@
         "g": 1,
         "b": 1
       },
-      "performedOn": "2017-05-03T13:37:37.505Z",
+      "performedOn": "2017-05-03T16:38:11.178Z",
       "performedDecisions": [
         "CYAN"
       ],
@@ -165,14 +132,56 @@
       "inputs": {
         "r": 0,
         "g": 1,
+        "b": 0
+      },
+      "performedOn": "2017-05-03T16:38:11.182Z",
+      "performedDecisions": [
+        "GREEN"
+      ],
+      "matchedStates": [
+        "GREEN"
+      ]
+    },
+    {
+      "inputs": {
+        "r": 0,
+        "g": 1,
         "b": 1
       },
-      "performedOn": "2017-05-03T13:37:37.510Z",
+      "performedOn": "2017-05-03T16:38:11.185Z",
       "performedDecisions": [
         "CYAN"
       ],
       "matchedStates": [
         "CYAN"
+      ]
+    },
+    {
+      "inputs": {
+        "r": 0,
+        "g": 0,
+        "b": 0
+      },
+      "performedOn": "2017-05-03T16:38:11.188Z",
+      "performedDecisions": [
+        "BLACK"
+      ],
+      "matchedStates": [
+        "BLACK"
+      ]
+    },
+    {
+      "inputs": {
+        "r": 1,
+        "g": 1,
+        "b": 1
+      },
+      "performedOn": "2017-05-03T16:38:11.193Z",
+      "performedDecisions": [
+        "WHITE"
+      ],
+      "matchedStates": [
+        "WHITE"
       ]
     }
   ]

@@ -1,5 +1,12 @@
 {
-  "decisions": [],
+  "decisions": [
+    "WelcomeSMS",
+    "WelcomeGoodCustomer",
+    "WelcomeBestCustomer",
+    "IntroduceFoodCourtEvent",
+    "IntroduceFashionStoreEvent",
+    "IntroduceElectronicStoreEvent"
+  ],
   "conditions": [
     {
       "state": "VisitFirstTimet",
@@ -36,7 +43,7 @@
         "visitedElectronicStoreToday": 0,
         "type": "normal"
       },
-      "performedOn": "2017-05-03T14:37:23.730Z",
+      "performedOn": "2017-05-03T16:59:01.431Z",
       "performedDecisions": [
         "WelcomeSMS",
         "IntroduceFoodCourtEvent"
@@ -55,7 +62,7 @@
         "visitedElectronicStoreToday": 0,
         "type": "normal"
       },
-      "performedOn": "2017-05-03T14:37:23.743Z",
+      "performedOn": "2017-05-03T16:59:01.441Z",
       "performedDecisions": [
         "WelcomeBestCustomer",
         "IntroduceFoodCourtEvent",
@@ -76,7 +83,7 @@
         "visitedElectronicStoreToday": 0,
         "type": "normal"
       },
-      "performedOn": "2017-05-03T14:37:23.746Z",
+      "performedOn": "2017-05-03T16:59:01.444Z",
       "performedDecisions": [
         "WelcomeGoodCustomer",
         "WelcomeBestCustomer",
@@ -99,7 +106,7 @@
         "visitedElectronicStoreToday": 1,
         "type": "vip"
       },
-      "performedOn": "2017-05-03T14:37:23.750Z",
+      "performedOn": "2017-05-03T16:59:01.448Z",
       "performedDecisions": [
         "WelcomeSMS",
         "IntroduceFoodCourtEvent",
@@ -120,7 +127,7 @@
         "visitedElectronicStoreToday": 1,
         "type": "vip"
       },
-      "performedOn": "2017-05-03T14:37:23.754Z",
+      "performedOn": "2017-05-03T16:59:01.451Z",
       "performedDecisions": [
         "IntroduceFoodCourtEvent",
         "IntroduceFashionStoreEvent",
@@ -141,7 +148,7 @@
         "visitedElectronicStoreToday": 0,
         "type": "vip"
       },
-      "performedOn": "2017-05-03T14:37:23.758Z",
+      "performedOn": "2017-05-03T16:59:01.453Z",
       "performedDecisions": [
         "WelcomeGoodCustomer",
         "WelcomeBestCustomer",

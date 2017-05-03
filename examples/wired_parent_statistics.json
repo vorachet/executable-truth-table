@@ -1,5 +1,8 @@
 {
-  "decisions": [],
+  "decisions": [
+    "NotifyEventSMS",
+    "NotifyVIPEventSMS"
+  ],
   "conditions": [
     {
       "state": "Normal",
@@ -20,7 +23,7 @@
         "visitedElectronicStoreToday": 0,
         "type": "normal"
       },
-      "performedOn": "2017-05-03T14:37:23.631Z",
+      "performedOn": "2017-05-03T16:59:01.340Z",
       "performedDecisions": [
         "NotifyEventSMS"
       ],
@@ -37,7 +40,7 @@
         "visitedElectronicStoreToday": 0,
         "type": "normal"
       },
-      "performedOn": "2017-05-03T14:37:23.742Z",
+      "performedOn": "2017-05-03T16:59:01.441Z",
       "performedDecisions": [
         "NotifyEventSMS"
       ],
@@ -54,7 +57,7 @@
         "visitedElectronicStoreToday": 0,
         "type": "normal"
       },
-      "performedOn": "2017-05-03T14:37:23.745Z",
+      "performedOn": "2017-05-03T16:59:01.443Z",
       "performedDecisions": [
         "NotifyEventSMS"
       ],
@@ -71,7 +74,7 @@
         "visitedElectronicStoreToday": 1,
         "type": "vip"
       },
-      "performedOn": "2017-05-03T14:37:23.749Z",
+      "performedOn": "2017-05-03T16:59:01.447Z",
       "performedDecisions": [
         "NotifyVIPEventSMS"
       ],
@@ -88,7 +91,7 @@
         "visitedElectronicStoreToday": 1,
         "type": "vip"
       },
-      "performedOn": "2017-05-03T14:37:23.753Z",
+      "performedOn": "2017-05-03T16:59:01.450Z",
       "performedDecisions": [
         "NotifyVIPEventSMS"
       ],
@@ -105,7 +108,7 @@
         "visitedElectronicStoreToday": 0,
         "type": "vip"
       },
-      "performedOn": "2017-05-03T14:37:23.757Z",
+      "performedOn": "2017-05-03T16:59:01.452Z",
       "performedDecisions": [
         "NotifyVIPEventSMS"
       ],
