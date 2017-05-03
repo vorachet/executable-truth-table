@@ -198,7 +198,11 @@ Output
 
 ```javacript
 {
-  "decisions": [],
+  "decisions": [
+    "CoolOn",
+    "HeatOn",
+    "HumidOn"
+  ],
   "conditions": [
     {
       "state": "Cold",
@@ -221,9 +225,9 @@ Output
         "tempSensor": 40,
         "humiditySensor": 80
       },
-      "performedOn": "2017-05-03T14:39:16.611Z",
+      "performedOn": "2017-05-03T16:37:03.897Z",
       "performedDecisions": [
-        "CoolOn"
+        "HeatOn"
       ],
       "matchedStates": [
         "Cold"
@@ -236,9 +240,9 @@ Output
         "tempSensor": 80,
         "humiditySensor": 20
       },
-      "performedOn": "2017-05-03T14:39:16.702Z",
+      "performedOn": "2017-05-03T16:37:03.996Z",
       "performedDecisions": [
-        "HeatOn",
+        "CoolOn",
         "HumidOn"
       ],
       "matchedStates": [
@@ -253,9 +257,9 @@ Output
         "tempSensor": 100,
         "humiditySensor": 50
       },
-      "performedOn": "2017-05-03T14:39:16.703Z",
+      "performedOn": "2017-05-03T16:37:03.997Z",
       "performedDecisions": [
-        "HeatOn"
+        "CoolOn"
       ],
       "matchedStates": [
         "Hot"
@@ -268,9 +272,9 @@ Output
         "tempSensor": 10,
         "humiditySensor": 10
       },
-      "performedOn": "2017-05-03T14:39:16.706Z",
+      "performedOn": "2017-05-03T16:37:04.000Z",
       "performedDecisions": [
-        "CoolOn",
+        "HeatOn",
         "HumidOn"
       ],
       "matchedStates": [
@@ -337,14 +341,13 @@ fs.writeFileSync(__dirname + '/smartcity_statistics.json', JSON.stringify(ttable
 
 ```
 
-[View example specification table](https://htmlpreview.github.io/?https://github.com/vorachet/executable-truth-table/blob/master/examples/smartcity_spec.html)
-
-[View example statistic table](https://htmlpreview.github.io/?https://github.com/vorachet/executable-truth-table/blob/master/examples/smartcity_statistics.html)
+[View specification table](https://htmlpreview.github.io/?https://github.com/vorachet/executable-truth-table/blob/master/examples/smartcity_spec.html)
+[View statistic table](https://htmlpreview.github.io/?https://github.com/vorachet/executable-truth-table/blob/master/examples/smartcity_statistics.html)
 
 
 ## Wired Truth Table Example
 
-![generated_spec](https://github.com/vorachet/executable-truth-table/blob/master/images/wiredconcept.png)
+![generated_spec](https://github.com/vorachet/executable-truth-table/blob/master/images/wired_concept.png)
 
 
 ```javascript
@@ -441,6 +444,7 @@ fs.writeFileSync(__dirname + '/wired_parent_statistics.json', JSON.stringify(cus
 fs.writeFileSync(__dirname + '/wired_child_statistics.json', JSON.stringify(shoppingMallVisit.statistics, null, 2), 'utf-8')
 ```
 
-[View example specification table](https://htmlpreview.github.io/?https://github.com/vorachet/executable-truth-table/blob/master/examples/wiredspec.html)
-
-[View example statistic table](https://htmlpreview.github.io/?https://github.com/vorachet/executable-truth-table/blob/master/examples/wiredstatistics.html)
+[View parent specification table](https://htmlpreview.github.io/?https://github.com/vorachet/executable-truth-table/blob/master/examples/wired_parent_spec.html)
+[View child specification table](https://htmlpreview.github.io/?https://github.com/vorachet/executable-truth-table/blob/master/examples/wired_child_spec.html)
+[View parent statistic table](https://htmlpreview.github.io/?https://github.com/vorachet/executable-truth-table/blob/master/examples/wired_parent_statistics.html)
+[View child statistic table](https://htmlpreview.github.io/?https://github.com/vorachet/executable-truth-table/blob/master/examples/wired_child_statistics.html)
