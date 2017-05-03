@@ -43,7 +43,7 @@
         "visitedElectronicStoreToday": 0,
         "type": "normal"
       },
-      "performedOn": "2017-05-03T16:59:01.431Z",
+      "performedOn": "2017-05-03T17:12:54.273Z",
       "performedDecisions": [
         "WelcomeSMS",
         "IntroduceFoodCourtEvent"
@@ -62,7 +62,7 @@
         "visitedElectronicStoreToday": 0,
         "type": "normal"
       },
-      "performedOn": "2017-05-03T16:59:01.441Z",
+      "performedOn": "2017-05-03T17:12:54.285Z",
       "performedDecisions": [
         "WelcomeBestCustomer",
         "IntroduceFoodCourtEvent",
@@ -83,7 +83,7 @@
         "visitedElectronicStoreToday": 0,
         "type": "normal"
       },
-      "performedOn": "2017-05-03T16:59:01.444Z",
+      "performedOn": "2017-05-03T17:12:54.288Z",
       "performedDecisions": [
         "WelcomeGoodCustomer",
         "WelcomeBestCustomer",
@@ -106,7 +106,7 @@
         "visitedElectronicStoreToday": 1,
         "type": "vip"
       },
-      "performedOn": "2017-05-03T16:59:01.448Z",
+      "performedOn": "2017-05-03T17:12:54.292Z",
       "performedDecisions": [
         "WelcomeSMS",
         "IntroduceFoodCourtEvent",
@@ -127,7 +127,7 @@
         "visitedElectronicStoreToday": 1,
         "type": "vip"
       },
-      "performedOn": "2017-05-03T16:59:01.451Z",
+      "performedOn": "2017-05-03T17:12:54.295Z",
       "performedDecisions": [
         "IntroduceFoodCourtEvent",
         "IntroduceFashionStoreEvent",
@@ -148,7 +148,7 @@
         "visitedElectronicStoreToday": 0,
         "type": "vip"
       },
-      "performedOn": "2017-05-03T16:59:01.453Z",
+      "performedOn": "2017-05-03T17:12:54.297Z",
       "performedDecisions": [
         "WelcomeGoodCustomer",
         "WelcomeBestCustomer",

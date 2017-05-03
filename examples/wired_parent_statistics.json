@@ -23,7 +23,7 @@
         "visitedElectronicStoreToday": 0,
         "type": "normal"
       },
-      "performedOn": "2017-05-03T16:59:01.340Z",
+      "performedOn": "2017-05-03T17:12:54.175Z",
       "performedDecisions": [
         "NotifyEventSMS"
       ],
@@ -40,7 +40,7 @@
         "visitedElectronicStoreToday": 0,
         "type": "normal"
       },
-      "performedOn": "2017-05-03T16:59:01.441Z",
+      "performedOn": "2017-05-03T17:12:54.284Z",
       "performedDecisions": [
         "NotifyEventSMS"
       ],
@@ -57,7 +57,7 @@
         "visitedElectronicStoreToday": 0,
         "type": "normal"
       },
-      "performedOn": "2017-05-03T16:59:01.443Z",
+      "performedOn": "2017-05-03T17:12:54.287Z",
       "performedDecisions": [
         "NotifyEventSMS"
       ],
@@ -74,7 +74,7 @@
         "visitedElectronicStoreToday": 1,
         "type": "vip"
       },
-      "performedOn": "2017-05-03T16:59:01.447Z",
+      "performedOn": "2017-05-03T17:12:54.291Z",
       "performedDecisions": [
         "NotifyVIPEventSMS"
       ],
@@ -91,7 +91,7 @@
         "visitedElectronicStoreToday": 1,
         "type": "vip"
       },
-      "performedOn": "2017-05-03T16:59:01.450Z",
+      "performedOn": "2017-05-03T17:12:54.294Z",
       "performedDecisions": [
         "NotifyVIPEventSMS"
       ],
@@ -108,7 +108,7 @@
         "visitedElectronicStoreToday": 0,
         "type": "vip"
       },
-      "performedOn": "2017-05-03T16:59:01.452Z",
+      "performedOn": "2017-05-03T17:12:54.297Z",
       "performedDecisions": [
         "NotifyVIPEventSMS"
       ],
