@@ -23,7 +23,7 @@ const TTABLE = require('executable-truth-table');
 const ttable = new TTABLE()
 ```
 
-Set evaluation mode of truth table
+Choose evaluation mode of truth table
 ```javascript
 ttable.disjunctionMode() // Use OR operation in Truth Table
 ttable.conjunctionMode() // Use AND operation in Truth Table
@@ -101,8 +101,8 @@ ttable
     .setCondition({state: "Cold", equation: "tempSensor < DESIRED_TEMP"})
     .setCondition({state: "Hot", equation: "tempSensor > DESIRED_TEMP"})
     .setCondition({state: "Dry", equation: "humiditySensor < DESIRED_HUMIDITY"})
-    .setDecision({run: [CoolOn], if: ["Cold"]})
-    .setDecision({run: [HeatOn], if: ["Hot"]})
+    .setDecision({run: [CoolOn], if: ["Hot"]})
+    .setDecision({run: [HeatOn], if: ["Cold"]})
     .setDecision({run: [HumidOn],if: ["Dry"]})
 
 fs.writeFileSync(__dirname + '/climate-controller_spec.html', ttable.exportSpecAsHTML(), 'utf-8')
@@ -123,48 +123,48 @@ Output
 ```bash
 $ node climate-controller
   ttable setCondition(mode=Disjunction/OR): { state: 'Cold', equation: 'tempSensor < DESIRED_TEMP' } +0ms
-  ttable setCondition(mode=Disjunction/OR): { state: 'Hot', equation: 'tempSensor > DESIRED_TEMP' } +7ms
+  ttable setCondition(mode=Disjunction/OR): { state: 'Hot', equation: 'tempSensor > DESIRED_TEMP' } +6ms
   ttable setCondition(mode=Disjunction/OR): { state: 'Dry', equation: 'humiditySensor < DESIRED_HUMIDITY' } +2ms
-  ttable setDecision(mode=Disjunction/OR): FFT run [ [Function: CoolOn] ] if Cold +2ms
-  ttable setDecision(mode=Disjunction/OR): FTF run [ [Function: HeatOn] ] if Hot +69ms
+  ttable setDecision(mode=Disjunction/OR): FTF run [ [Function: CoolOn] ] if Hot +2ms
+  ttable setDecision(mode=Disjunction/OR): FFT run [ [Function: HeatOn] ] if Cold +61ms
   ttable setDecision(mode=Disjunction/OR): TFF run [ [Function: HumidOn] ] if Dry +1ms
-  ttable eval() inputs {"DESIRED_TEMP":70,"DESIRED_HUMIDITY":40,"tempSensor":40,"humiditySensor":80} +5ms
-  ttable  T[Cold], equation = tempSensor < DESIRED_TEMP +84ms
-  ttable  F[Hot], equation = tempSensor > DESIRED_TEMP +6ms
-  ttable  F[Dry], equation = humiditySensor < DESIRED_HUMIDITY +0ms
-  ttable  matchedDecisions = [ [Function: CoolOn] ] +0ms
-  ClimateController CoolOn() +0ms
-  ClimateController    startCooler() +1ms
-  ClimateController    stopHeater() +0ms
-  ClimateController    stopHumidifier() +0ms
-  ttable eval() inputs {"DESIRED_TEMP":70,"DESIRED_HUMIDITY":40,"tempSensor":80,"humiditySensor":20} +0ms
-  ttable  F[Cold], equation = tempSensor < DESIRED_TEMP +0ms
-  ttable  T[Hot], equation = tempSensor > DESIRED_TEMP +0ms
-  ttable  T[Dry], equation = humiditySensor < DESIRED_HUMIDITY +1ms
-  ttable  matchedDecisions = [ [Function: HeatOn], [Function: HumidOn] ] +0ms
-  ClimateController HeatOn() +0ms
-  ClimateController    startHeater() +0ms
-  ClimateController    stopCooler() +0ms
-  ClimateController    stopHumidifier() +0ms
-  ClimateController HumidOn() +0ms
-  ClimateController    startHumidifier() +0ms
-  ttable eval() inputs {"DESIRED_TEMP":70,"DESIRED_HUMIDITY":40,"tempSensor":100,"humiditySensor":50} +0ms
-  ttable  F[Cold], equation = tempSensor < DESIRED_TEMP +1ms
-  ttable  T[Hot], equation = tempSensor > DESIRED_TEMP +1ms
+  ttable eval() inputs {"DESIRED_TEMP":70,"DESIRED_HUMIDITY":40,"tempSensor":40,"humiditySensor":80} +4ms
+  ttable  T[Cold], equation = tempSensor < DESIRED_TEMP +95ms
+  ttable  F[Hot], equation = tempSensor > DESIRED_TEMP +8ms
   ttable  F[Dry], equation = humiditySensor < DESIRED_HUMIDITY +0ms
   ttable  matchedDecisions = [ [Function: HeatOn] ] +0ms
   ClimateController HeatOn() +1ms
   ClimateController    startHeater() +0ms
   ClimateController    stopCooler() +0ms
   ClimateController    stopHumidifier() +0ms
-  ttable eval() inputs {"DESIRED_TEMP":70,"DESIRED_HUMIDITY":40,"tempSensor":10,"humiditySensor":10} +0ms
-  ttable  T[Cold], equation = tempSensor < DESIRED_TEMP +0ms
-  ttable  F[Hot], equation = tempSensor > DESIRED_TEMP +0ms
-  ttable  T[Dry], equation = humiditySensor < DESIRED_HUMIDITY +1ms
+  ttable eval() inputs {"DESIRED_TEMP":70,"DESIRED_HUMIDITY":40,"tempSensor":80,"humiditySensor":20} +1ms
+  ttable  F[Cold], equation = tempSensor < DESIRED_TEMP +0ms
+  ttable  T[Hot], equation = tempSensor > DESIRED_TEMP +1ms
+  ttable  T[Dry], equation = humiditySensor < DESIRED_HUMIDITY +0ms
   ttable  matchedDecisions = [ [Function: CoolOn], [Function: HumidOn] ] +0ms
   ClimateController CoolOn() +0ms
   ClimateController    startCooler() +0ms
   ClimateController    stopHeater() +0ms
+  ClimateController    stopHumidifier() +0ms
+  ClimateController HumidOn() +1ms
+  ClimateController    startHumidifier() +0ms
+  ttable eval() inputs {"DESIRED_TEMP":70,"DESIRED_HUMIDITY":40,"tempSensor":100,"humiditySensor":50} +0ms
+  ttable  F[Cold], equation = tempSensor < DESIRED_TEMP +0ms
+  ttable  T[Hot], equation = tempSensor > DESIRED_TEMP +1ms
+  ttable  F[Dry], equation = humiditySensor < DESIRED_HUMIDITY +0ms
+  ttable  matchedDecisions = [ [Function: CoolOn] ] +1ms
+  ClimateController CoolOn() +0ms
+  ClimateController    startCooler() +0ms
+  ClimateController    stopHeater() +0ms
+  ClimateController    stopHumidifier() +0ms
+  ttable eval() inputs {"DESIRED_TEMP":70,"DESIRED_HUMIDITY":40,"tempSensor":10,"humiditySensor":10} +0ms
+  ttable  T[Cold], equation = tempSensor < DESIRED_TEMP +0ms
+  ttable  F[Hot], equation = tempSensor > DESIRED_TEMP +1ms
+  ttable  T[Dry], equation = humiditySensor < DESIRED_HUMIDITY +0ms
+  ttable  matchedDecisions = [ [Function: HeatOn], [Function: HumidOn] ] +0ms
+  ClimateController HeatOn() +0ms
+  ClimateController    startHeater() +0ms
+  ClimateController    stopCooler() +0ms
   ClimateController    stopHumidifier() +0ms
   ClimateController HumidOn() +0ms
   ClimateController    startHumidifier() +0ms

@@ -38,8 +38,8 @@ ttable
     .setCondition({state: "Cold", equation: "tempSensor < DESIRED_TEMP"})
     .setCondition({state: "Hot", equation: "tempSensor > DESIRED_TEMP"})
     .setCondition({state: "Dry", equation: "humiditySensor < DESIRED_HUMIDITY"})
-    .setDecision({run: [CoolOn], if: ["Cold"]})
-    .setDecision({run: [HeatOn], if: ["Hot"]})
+    .setDecision({run: [CoolOn], if: ["Hot"]})
+    .setDecision({run: [HeatOn], if: ["Cold"]})
     .setDecision({run: [HumidOn],if: ["Dry"]})
 
 fs.writeFileSync(__dirname + '/climate-controller_spec.html', ttable.exportSpecAsHTML(), 'utf-8')
